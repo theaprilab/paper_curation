@@ -1,0 +1,1202 @@
+{
+  "fetched_at": "2026-09-28T11:58:16.099399+00:00",
+  "total": 54,
+  "papers": [
+    {
+      "id": "2605.19150",
+      "title": "Flash PD-SSM: Memory-Optimized Structured Sparse State-Space Models",
+      "authors": [
+        "Aleksandar Terzić",
+        "Francesco Carzaniga",
+        "Nicolas Menet",
+        "Yannick Biehl",
+        "Michael Hersche",
+        "Thomas Hofmann",
+        "Abbas Rahimi"
+      ],
+      "date": "2026-05-18",
+      "updated": "2026-05-18",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2605.19150",
+      "source": "arXiv",
+      "abstract": "State-space models (SSMs) face a fundamental trade-off between efficiency and expressivity that is mainly dictated by the structure of the model's transition matrix. Unstructured transition matrices enable maximal expressivity, as measured by their ability to model finite-state automaton (FSA) transitions, but come at a prohibitively high compute and memory cost. In contrast, most structured transition matrix forms are highly efficient both in runtime and memory consumption, but suffer from limited expressivity. Building on recent work on structured sparse SSMs, we propose Flash PD-SSM, a novel SSM that achieves comparable throughput to widely-used structured SSMs with significantly better expressivity guarantees. Flash PD-SSM maintains a trainable set of structured sparse matrices, a single one of which is discretely selected at each time-step, enabling FSA expressiveness at the level of unstructured matrices while maintaining the efficiency required for training models at scale. First, we validate Flash PD-SSM against a suite of alternative models on synthetic mechanistic and state-tracking tasks, finding that its theoretical expressivity is achieved in practice. Second, on multivariate time-series tasks involving sequences of length over 17,000, we find that Flash PD-SSM defines a new state-of-the-art (SoTA) accuracy among competing SSM methods. Finally, we demonstrate that Flash PD-SSM is an effective drop-in replacement for hybrid LLMs, yielding improvements both in natural language state-tracking and in common language modeling scenarios. The model exhibits increased throughput and decreased memory consumption compared to SSMs widely used in frontier language models.",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "2605.07775",
+      "title": "POETS: Uncertainty-Aware LLM Optimization via Compute-Efficient Policy Ensembles",
+      "authors": [
+        "Nicolas Menet",
+        "Andreas Krause",
+        "Abbas Rahimi"
+      ],
+      "date": "2026-05-08",
+      "updated": "2026-05-08",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2605.07775",
+      "source": "arXiv",
+      "abstract": "Balancing exploration and exploitation is a core challenge in sequential decision-making and black-box optimization. We introduce POETS ($\\textbf{Po}$licy $\\textbf{E}$nsembles for $\\textbf{T}$hompson $\\textbf{S}$ampling), a novel framework that bridges uncertainty quantification and policy optimization. Our approach is grounded in the insight that policies trained with Kullback-Leibler (KL) regularization implicitly encode an underlying reward function. Building on this, POETS bypasses the complex, nested process of training an uncertainty-aware reward model and separately fitting a policy to this model. Instead, we directly train a policy ensemble to capture epistemic uncertainty by matching implicitly encoded reward functions to online, bootstrapped data. To overcome the prohibitive compute and memory constraints of ensembling Large Language Models (LLMs), POETS utilizes an efficient architecture: the ensemble shares a pre-trained backbone while maintaining diversity through independent Low-Rank Adaptation (LoRA) branches. Theoretically, we prove that POETS implicitly conducts KL-regularized Thompson sampling and thus inherits strong cumulative regret bounds of ${\\mathcal O}(\\sqrt{T γ_T})$. Empirically, we demonstrate that POETS achieves state-of-the-art sample efficiency across diverse scientific discovery domains, including protein search and quantum circuit design. Furthermore, it improves the optimization trajectories of reinforcement learning, proving particularly robust in off-policy settings with experience replay or in small dataset regimes.",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ]
+    },
+    {
+      "id": "2603.20216",
+      "title": "Locally Coherent Parallel Decoding in Diffusion Language Models",
+      "authors": [
+        "Michael Hersche",
+        "Nicolas Menet",
+        "Ronan Tanios",
+        "Abbas Rahimi"
+      ],
+      "date": "2026-03-03",
+      "updated": "2026-05-18",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2603.20216",
+      "source": "arXiv",
+      "abstract": "Diffusion language models (DLMs) have emerged as a promising alternative to autoregressive (AR) models, offering sub-linear generation latency and bidirectional capabilities that are particularly appealing for code generation and editing. Achieving sub-linear latency in discrete DLMs requires predicting multiple tokens in parallel. However, standard DLMs sample tokens independently from conditional marginal distributions, failing to capture the joint dependencies among concurrently generated tokens. As a result, they often lead to syntactic inconsistencies and break multi-token structures. In this work, we introduce CoDiLA (Coherent Diffusion with Local Autoregression), a method that reconciles parallel sampling with local dependency modeling. Rather than forcing the DLM to resolve fine-grained syntax, CoDiLA delegates local decoding to a small, auxiliary AR model operating on the diffusion latents. This design allows for parallel generation while ensuring sequential validity within a block and maintaining core DLM capabilities, including bidirectional modeling across blocks. We demonstrate that using a highly compact auxiliary AR model (e.g., 0.6B parameters) effectively eliminates coherence artifacts, establishing a new Pareto frontier for accuracy and speed in code generation benchmarks.",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "2602.06098",
+      "title": "A Theoretical Analysis of Test-Driven Code Generation",
+      "authors": [
+        "Nicolas Menet",
+        "Michael Hersche",
+        "Andreas Krause",
+        "Abbas Rahimi"
+      ],
+      "date": "2026-02-05",
+      "updated": "2026-05-07",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2602.06098",
+      "source": "arXiv",
+      "abstract": "Code assistants are increasingly utilized in test-driven software development, yet the theoretical mechanisms behind their environment-interaction strategies remain underexplored. We provide a probabilistic framework for two dominant paradigms: code selection after generation using the execution environment, and code generation conditioned on environment feedback. First, we formalize several well-established selection heuristics as environment-aware estimators of code correctness. We theoretically prove that estimators based on fuzzy functional similarity add an inductive bias and strictly dominate estimators based on functional equivalence in terms of signal-to-noise ratio. Second, we frame backprompting as an in-context approximation of Thompson sampling. We derive a novel regret bound for reward functions with unobservable components, theoretically explaining why the effectiveness of backprompting is limited by the ambiguity of the informal task description (an irreducible regret). Using five state-of-the-art open weight models, we corroborate these findings across BigCodeBenchHard, LeetCodeDataset, and QiskitHumanEvalSim. Our formalization also suggests how to improve task descriptions effectively, leading to a new benchmark, QiskitHumanEvalSimX.",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "2512.19123",
+      "title": "A Composable Channel-Adaptive Architecture for Seizure Classification",
+      "authors": [
+        "Francesco Carzaniga",
+        "Michael Hersche",
+        "Kaspar Schindler",
+        "Abbas Rahimi"
+      ],
+      "date": "2025-12-22",
+      "updated": "2025-12-22",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2512.19123",
+      "source": "arXiv",
+      "abstract": "Objective: We develop a channel-adaptive (CA) architecture that seamlessly processes multi-variate time-series with an arbitrary number of channels, and in particular intracranial electroencephalography (iEEG) recordings. Methods: Our CA architecture first processes the iEEG signal using state-of-the-art models applied to each single channel independently. The resulting features are then fused using a vector-symbolic algorithm which reconstructs the spatial relationship using a trainable scalar per channel. Finally, the fused features are accumulated in a long-term memory of up to 2 minutes to perform the classification. Each CA-model can then be pre-trained on a large corpus of iEEG recordings from multiple heterogeneous subjects. The pre-trained model is personalized to each subject via a quick fine-tuning routine, which uses equal or lower amounts of data compared to existing state-of-the-art models, but requiring only 1/5 of the time. Results: We evaluate our CA-models on a seizure detection task both on a short-term (~20 hours) and a long-term (~2500 hours) dataset. In particular, our CA-EEGWaveNet is trained on a single seizure of the tested subject, while the baseline EEGWaveNet is trained on all but one. Even in this challenging scenario, our CA-EEGWaveNet surpasses the baseline in median F1-score (0.78 vs 0.76). Similarly, CA-EEGNet based on EEGNet, also surpasses its baseline in median F1-score (0.79 vs 0.74). Conclusion and significance: Our CA-model addresses two issues: first, it is channel-adaptive and can therefore be trained across heterogeneous subjects without loss of performance; second, it increases the effective temporal context size to a clinically-relevant length. Therefore, our model is a drop-in replacement for existing models, bringing better characteristics and performance across the board.",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "2511.02667",
+      "title": "Scalable Evaluation and Neural Models for Compositional Generalization",
+      "authors": [
+        "Giacomo Camposampiero",
+        "Pietro Barbiero",
+        "Michael Hersche",
+        "Roger Wattenhofer",
+        "Abbas Rahimi"
+      ],
+      "date": "2025-11-04",
+      "updated": "2025-11-05",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2511.02667",
+      "source": "arXiv",
+      "abstract": "Compositional generalization-a key open challenge in modern machine learning-requires models to predict unknown combinations of known concepts. However, assessing compositional generalization remains a fundamental challenge due to the lack of standardized evaluation protocols and the limitations of current benchmarks, which often favor efficiency over rigor. At the same time, general-purpose vision architectures lack the necessary inductive biases, and existing approaches to endow them compromise scalability. As a remedy, this paper introduces: 1) a rigorous evaluation framework that unifies and extends previous approaches while reducing computational requirements from combinatorial to constant; 2) an extensive and modern evaluation on the status of compositional generalization in supervised vision backbones, training more than 5000 models; 3) Attribute Invariant Networks, a class of models establishing a new Pareto frontier in compositional generalization, achieving a 23.43% accuracy improvement over baselines while reducing parameter overhead from 600% to 16% compared to fully disentangled counterparts. Our code is available at https://github.com/IBM/scalable-compositional-generalization.",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "2510.17496",
+      "title": "I-RAVEN-X: Benchmarking Generalization and Robustness of Analogical and Mathematical Reasoning in Large Language and Reasoning Models",
+      "authors": [
+        "Giacomo Camposampiero",
+        "Michael Hersche",
+        "Roger Wattenhofer",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2025-10-20",
+      "updated": "2025-10-31",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2510.17496",
+      "source": "arXiv",
+      "abstract": "We introduce I-RAVEN-X, a symbolic benchmark designed to evaluate generalization and robustness in analogical and mathematical reasoning for Large Language Models (LLMs) and Large Reasoning Models (LRMs). I-RAVEN-X extends I-RAVEN by increasing operand complexity, attribute range, and introducing perceptual uncertainty. Compared to LLMs, empirical results show that LRMs achieve improved productivity and systematicity on longer reasoning relations and wider attribute ranges, respectively. However, LRMs are still significantly challenged by reasoning under uncertainty and cannot effectively explore multiple probabilistic outcomes.",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "2510.17206",
+      "title": "Soft-Masked Diffusion Language Models",
+      "authors": [
+        "Michael Hersche",
+        "Samuel Moor-Smith",
+        "Thomas Hofmann",
+        "Abbas Rahimi"
+      ],
+      "date": "2025-10-20",
+      "updated": "2026-03-02",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2510.17206",
+      "source": "arXiv",
+      "abstract": "Diffusion models have demonstrated strong potential in language modeling, offering various advantages over traditional autoregressive approaches. Their ability to generate and revise entire responses in parallel enables faster generation and built-in self-correction mechanisms. Most modern diffusion-based language models employ masked diffusion, where decoding involves iteratively processing masked tokens based on a binary decision: either retaining the mask or replacing it with the predicted token. However, this binary choice discards valuable predictive information when the mask is retained. To address this limitation, we introduce soft-masking (SM), a novel method that dynamically blends the embedding of the mask token with the embeddings of the top-k predicted tokens from the previous decoding step, for each retained mask. This provides the model with a more informative prior, preserving context from earlier computations and allowing partial information about masked tokens to propagate beyond a single step. We propose a training methodology that efficiently adapts masked diffusion language models to incorporate SM. We demonstrate that training a 169M parameter model from scratch with SM yields superior perplexity and MAUVE scores compared to binary masking baselines. Similarly, a pretrained model can be enhanced with SM through continued pretraining. Finally, we finetune two state-of-the-art diffusion models, Dream-7B and Dream-Coder-7B, with SM. SM consistently improves performance across multiple coding benchmarks, particularly in high-throughput settings. The code is available at https://github.com/IBM/soft-masked-diffusion-language-models.",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "id": "2510.13328",
+      "title": "Thompson Sampling via Fine-Tuning of LLMs",
+      "authors": [
+        "Nicolas Menet",
+        "Aleksandar Terzić",
+        "Michael Hersche",
+        "Andreas Krause",
+        "Abbas Rahimi"
+      ],
+      "date": "2025-10-15",
+      "updated": "2026-02-27",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2510.13328",
+      "source": "arXiv",
+      "abstract": "Bayesian optimization in large unstructured discrete spaces is often hindered by the computational cost of maximizing acquisition functions due to the absence of gradients. We propose a scalable alternative based on Thompson sampling that eliminates the need for acquisition function maximization by directly parameterizing the probability that a candidate yields the maximum reward. Our approach, Thompson Sampling via Fine-Tuning (ToSFiT) leverages the prior knowledge embedded in prompt-conditioned large language models, and incrementally adapts them toward the posterior. Theoretically, we derive a novel regret bound for a variational formulation of Thompson Sampling that matches the strong guarantees of its standard counterpart. Our analysis reveals the critical role of careful adaptation to the posterior probability of maximality -- a principle that underpins our ToSFiT algorithm. Empirically, we validate our method on three diverse tasks: FAQ response refinement, thermally stable protein search, and quantum circuit design. Within a collection of methods covering in-context Bayesian optimization, reinforcement learning, and evolutionary search, ToSFiT exhibits both state-of-the-art sample efficiency and computational efficiency.",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "2509.22284",
+      "title": "Structured Sparse Transition Matrices to Enable State Tracking in State-Space Models",
+      "authors": [
+        "Aleksandar Terzić",
+        "Nicolas Menet",
+        "Michael Hersche",
+        "Thomas Hofmann",
+        "Abbas Rahimi"
+      ],
+      "date": "2025-09-26",
+      "updated": "2025-12-16",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2509.22284",
+      "source": "arXiv",
+      "abstract": "Modern state-space models (SSMs) often utilize transition matrices which enable efficient computation but pose restrictions on the model's expressivity, as measured in terms of the ability to emulate finite-state automata (FSA). While unstructured transition matrices are optimal in terms of expressivity, they come at a prohibitively high compute and memory cost even for moderate state sizes. We propose a structured sparse parametrization of transition matrices in SSMs that enables FSA state tracking with optimal state size and depth, while keeping the computational cost of the recurrence comparable to that of diagonal SSMs. Our method, PD-SSM, parametrizes the transition matrix as the product of a column one-hot matrix ($P$) and a complex-valued diagonal matrix ($D$). Consequently, the computational cost of parallel scans scales linearly with the state size. Theoretically, the model is BIBO-stable and can emulate any $N$-state FSA with one layer of dimension $N$ and a linear readout of size $N \\times N$, significantly improving on all current structured SSM guarantees. Experimentally, the model significantly outperforms a wide collection of modern SSM variants on various FSA state tracking tasks. On multiclass time-series classification, the performance is comparable to that of neural controlled differential equations, a paradigm explicitly built for time-series analysis. Finally, we integrate PD-SSM into a hybrid Transformer-SSM architecture and demonstrate that the model can effectively track the states of a complex FSA in which transitions are encoded as a set of variable-length English sentences. The code is available at https://github.com/IBM/expressive-sparse-state-space-model",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "2506.20354",
+      "title": "A foundation model with multi-variate parallel attention to generate neuronal activity",
+      "authors": [
+        "Francesco Carzaniga",
+        "Michael Hersche",
+        "Abu Sebastian",
+        "Kaspar Schindler",
+        "Abbas Rahimi"
+      ],
+      "date": "2025-06-25",
+      "updated": "2026-08-31",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2506.20354",
+      "source": "arXiv",
+      "abstract": "Learning from multi-variate time-series with heterogeneous channel configurations remains a fundamental challenge for deep neural networks, particularly in clinical domains such as intracranial electroencephalography (iEEG), where channel setups vary widely across subjects. In this work, we introduce multi-variate parallel attention (MVPA), a novel self-attention mechanism that disentangles content, temporal, and spatial attention, enabling flexible, generalizable, and efficient modeling of time-series data with varying channel counts and configurations. We use MVPA to build MVPFormer, a generative foundation model for human electrophysiology, trained to predict the evolution of iEEG signals across subjects. To support this and future efforts by the community, we release the SWEC iEEG dataset, the largest publicly available iEEG dataset to date, comprising nearly 10,000 hours of recordings from heterogeneous clinical sources. MVPFormer leverages MVPA to achieve strong generalization across subjects, demonstrating expert-level performance in several iEEG tasks. MVPFormer surpasses state-of-the-art (SOTA) Transformer baselines in seizure detection across the SWEC, the MAYO, and the FNUSA datasets, while also achieving SOTA performance on four Brain TreeBank iEEG decoding tasks (volume, pitch, onset, and speech). We further validate MVPA on standard time-series forecasting and classification tasks, where it matches or exceeds the performance of existing attention-based models. Together, our contributions establish MVPA as a general-purpose attention mechanism for heterogeneous time-series and MVPFormer as the first open-source, open-weights, and open-data iEEG foundation model with SOTA clinical performance. The code is available at https://github.com/IBM/multi-variate-parallel-transformer. The SWEC iEEG dataset is available at https://huggingface.co/datasets/NeuroTec/SWEC_iEEG_Dataset.",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "2505.09663",
+      "title": "Analog Foundation Models",
+      "authors": [
+        "Julian Büchel",
+        "Iason Chalas",
+        "Giovanni Acampa",
+        "An Chen",
+        "Omobayode Fagbohungbe",
+        "Sidney Tsai",
+        "Kaoutar El Maghraoui",
+        "Manuel Le Gallo",
+        "Abbas Rahimi",
+        "Abu Sebastian"
+      ],
+      "date": "2025-05-14",
+      "updated": "2025-10-27",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2505.09663",
+      "source": "arXiv",
+      "abstract": "Analog in-memory computing (AIMC) is a promising compute paradigm to improve speed and power efficiency of neural network inference beyond the limits of conventional von Neumann-based architectures. However, AIMC introduces fundamental challenges such as noisy computations and strict constraints on input and output quantization. Because of these constraints and imprecisions, off-the-shelf LLMs are not able to achieve 4-bit-level performance when deployed on AIMC-based hardware. While researchers previously investigated recovering this accuracy gap on small, mostly vision-based models, a generic method applicable to LLMs pre-trained on trillions of tokens does not yet exist. In this work, we introduce a general and scalable method to robustly adapt LLMs for execution on noisy, low-precision analog hardware. Our approach enables state-of-the-art models $\\unicode{x2013}$ including Phi-3-mini-4k-instruct and Llama-3.2-1B-Instruct $\\unicode{x2013}$ to retain performance comparable to 4-bit weight, 8-bit activation baselines, despite the presence of analog noise and quantization constraints. Additionally, we show that as a byproduct of our training methodology, analog foundation models can be quantized for inference on low-precision digital hardware. Finally, we show that our models also benefit from test-time compute scaling, showing better scaling behavior than models trained with 4-bit weight and 8-bit static input quantization. Our work bridges the gap between high-capacity LLMs and efficient analog hardware, offering a path toward energy-efficient foundation models. Code is available at https://github.com/IBM/analog-foundation-models.",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "2503.11207",
+      "title": "Can Large Reasoning Models do Analogical Reasoning under Perceptual Uncertainty?",
+      "authors": [
+        "Giacomo Camposampiero",
+        "Michael Hersche",
+        "Roger Wattenhofer",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2025-03-14",
+      "updated": "2025-06-04",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2503.11207",
+      "source": "arXiv",
+      "abstract": "This work presents a first evaluation of two state-of-the-art Large Reasoning Models (LRMs), OpenAI's o3-mini and DeepSeek R1, on analogical reasoning, focusing on well-established nonverbal human IQ tests based on Raven's progressive matrices. We benchmark with the I-RAVEN dataset and its extension, I-RAVEN-X, which tests the ability to generalize to longer reasoning rules and ranges of the attribute values. To assess the influence of visual uncertainties on these symbolic analogical reasoning tests, we extend the I-RAVEN-X dataset, which otherwise assumes an oracle perception. We adopt a two-fold strategy to simulate this imperfect visual perception: 1) we introduce confounding attributes which, being sampled at random, do not contribute to the prediction of the correct answer of the puzzles, and 2) we smoothen the distributions of the input attributes' values. We observe a sharp decline in OpenAI's o3-mini task accuracy, dropping from 86.6% on the original I-RAVEN to just 17.0% -- approaching random chance -- on the more challenging I-RAVEN-X, which increases input length and range and emulates perceptual uncertainty. This drop occurred despite spending 3.4x more reasoning tokens. A similar trend is also observed for DeepSeek R1: from 80.6% to 23.2%. On the other hand, a neuro-symbolic probabilistic abductive model, ARLC, that achieves state-of-the-art performances on I-RAVEN, can robustly reason under all these out-of-distribution tests, maintaining strong accuracy with only a modest accuracy reduction from 98.6% to 88.0%. Our code is available at https://github.com/IBM/raven-large-language-models.",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "2502.17462",
+      "title": "The Case for Cleaner Biosignals: High-fidelity Neural Compressor Enables Transfer from Cleaner iEEG to Noisier EEG",
+      "authors": [
+        "Francesco Stefano Carzaniga",
+        "Gary Tom Hoppeler",
+        "Michael Hersche",
+        "Kaspar Anton Schindler",
+        "Abbas Rahimi"
+      ],
+      "date": "2025-02-10",
+      "updated": "2025-02-10",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2502.17462",
+      "source": "arXiv",
+      "abstract": "All data modalities are not created equal, even when the signal they measure comes from the same source. In the case of the brain, two of the most important data modalities are the scalp electroencephalogram (EEG), and the intracranial electroencephalogram (iEEG). They are used by human experts, supported by deep learning (DL) models, to accomplish a variety of tasks, such as seizure detection and motor imagery classification. Although the differences between EEG and iEEG are well understood by human experts, the performance of DL models across these two modalities remains under-explored. To help characterize the importance of clean data on the performance of DL models, we propose BrainCodec, a high-fidelity EEG and iEEG neural compressor. We find that training BrainCodec on iEEG and then transferring to EEG yields higher reconstruction quality than training on EEG directly. In addition, we also find that training BrainCodec on both EEG and iEEG improves fidelity when reconstructing EEG. Our work indicates that data sources with higher SNR, such as iEEG, provide better performance across the board also in the medical time-series domain. BrainCodec also achieves up to a 64x compression on iEEG and EEG without a notable decrease in quality. BrainCodec markedly surpasses current state-of-the-art compression models both in final compression ratio and in reconstruction fidelity. We also evaluate the fidelity of the compressed signals objectively on a seizure detection and a motor imagery task performed by standard DL models. Here, we find that BrainCodec achieves a reconstruction fidelity high enough to ensure no performance degradation on the downstream tasks. Finally, we collect the subjective assessment of an expert neurologist, that confirms the high reconstruction quality of BrainCodec in a realistic scenario. The code is available at https://github.com/IBM/eeg-ieeg-brain-compressor.",
+      "categories": [
+        "eess.SP",
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "2412.19350",
+      "title": "On the Expressiveness and Length Generalization of Selective State-Space Models on Regular Languages",
+      "authors": [
+        "Aleksandar Terzić",
+        "Michael Hersche",
+        "Giacomo Camposampiero",
+        "Thomas Hofmann",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2024-12-26",
+      "updated": "2025-07-04",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2412.19350",
+      "source": "arXiv",
+      "abstract": "Selective state-space models (SSMs) are an emerging alternative to the Transformer, offering the unique advantage of parallel training and sequential inference. Although these models have shown promising performance on a variety of tasks, their formal expressiveness and length generalization properties remain underexplored. In this work, we provide insight into the workings of selective SSMs by analyzing their expressiveness and length generalization performance on regular language tasks, i.e., finite-state automaton (FSA) emulation. We address certain limitations of modern SSM-based architectures by introducing the Selective Dense State-Space Model (SD-SSM), the first selective SSM that exhibits perfect length generalization on a set of various regular language tasks using a single layer. It utilizes a dictionary of dense transition matrices, a softmax selection mechanism that creates a convex combination of dictionary matrices at each time step, and a readout consisting of layer normalization followed by a linear map. We then proceed to evaluate variants of diagonal selective SSMs by considering their empirical performance on commutative and non-commutative automata. We explain the experimental results with theoretical considerations. Our code is available at https://github.com/IBM/selective-dense-state-space-model.",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "id": "2412.05586",
+      "title": "Towards Learning to Reason: Comparing LLMs with Neuro-Symbolic on Arithmetic Relations in Abstract Reasoning",
+      "authors": [
+        "Michael Hersche",
+        "Giacomo Camposampiero",
+        "Roger Wattenhofer",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2024-12-07",
+      "updated": "2024-12-07",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2412.05586",
+      "source": "arXiv",
+      "abstract": "This work compares large language models (LLMs) and neuro-symbolic approaches in solving Raven's progressive matrices (RPM), a visual abstract reasoning test that involves the understanding of mathematical rules such as progression or arithmetic addition. Providing the visual attributes directly as textual prompts, which assumes an oracle visual perception module, allows us to measure the model's abstract reasoning capability in isolation. Despite providing such compositionally structured representations from the oracle visual perception and advanced prompting techniques, both GPT-4 and Llama-3 70B cannot achieve perfect accuracy on the center constellation of the I-RAVEN dataset. Our analysis reveals that the root cause lies in the LLM's weakness in understanding and executing arithmetic rules. As a potential remedy, we analyze the Abductive Rule Learner with Context-awareness (ARLC), a neuro-symbolic approach that learns to reason with vector-symbolic architectures (VSAs). Here, concepts are represented with distributed vectors s.t. dot products between encoded vectors define a similarity kernel, and simple element-wise operations on the vectors perform addition/subtraction on the encoded values. We find that ARLC achieves almost perfect accuracy on the center constellation of I-RAVEN, demonstrating a high fidelity in arithmetic rules. To stress the length generalization capabilities of the models, we extend the RPM tests to larger matrices (3x10 instead of typical 3x3) and larger dynamic ranges of the attribute values (from 10 up to 1000). We find that the LLM's accuracy of solving arithmetic rules drops to sub-10%, especially as the dynamic range expands, while ARLC can maintain a high accuracy due to emulating symbolic computations on top of properly distributed representations. Our code is available at https://github.com/IBM/raven-large-language-models.",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.SC"
+      ]
+    },
+    {
+      "id": "2412.00354",
+      "title": "On the Role of Noise in Factorizers for Disentangling Distributed Representations",
+      "authors": [
+        "Geethan Karunaratne",
+        "Michael Hersche",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2024-11-30",
+      "updated": "2024-11-30",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2412.00354",
+      "source": "arXiv",
+      "abstract": "To efficiently factorize high-dimensional distributed representations to the constituent atomic vectors, one can exploit the compute-in-superposition capabilities of vector-symbolic architectures (VSA). Such factorizers however suffer from the phenomenon of limit cycles. Applying noise during the iterative decoding is one mechanism to address this issue. In this paper, we explore ways to further relax the noise requirement by applying noise only at the time of VSA's reconstruction codebook initialization. While the need for noise during iterations proves analog in-memory computing systems to be a natural choice as an implementation media, the adequacy of initialization noise allows digital hardware to remain equally indispensable. This broadens the implementation possibilities of factorizers. Our study finds that while the best performance shifts from initialization noise to iterative noise as the number of factors increases from 2 to 4, both extend the operational capacity by at least 50 times compared to the baseline factorizer resonator networks. Our code is available at: https://github.com/IBM/in-memory-factorizer",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "2411.03375",
+      "title": "Kernel Approximation using Analog In-Memory Computing",
+      "authors": [
+        "Julian Büchel",
+        "Giacomo Camposampiero",
+        "Athanasios Vasilopoulos",
+        "Corey Lammie",
+        "Manuel Le Gallo",
+        "Abbas Rahimi",
+        "Abu Sebastian"
+      ],
+      "date": "2024-11-05",
+      "updated": "2024-11-05",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2411.03375",
+      "source": "arXiv",
+      "abstract": "Kernel functions are vital ingredients of several machine learning algorithms, but often incur significant memory and computational costs. We introduce an approach to kernel approximation in machine learning algorithms suitable for mixed-signal Analog In-Memory Computing (AIMC) architectures. Analog In-Memory Kernel Approximation addresses the performance bottlenecks of conventional kernel-based methods by executing most operations in approximate kernel methods directly in memory. The IBM HERMES Project Chip, a state-of-the-art phase-change memory based AIMC chip, is utilized for the hardware demonstration of kernel approximation. Experimental results show that our method maintains high accuracy, with less than a 1% drop in kernel-based ridge classification benchmarks and within 1% accuracy on the Long Range Arena benchmark for kernelized attention in Transformer neural networks. Compared to traditional digital accelerators, our approach is estimated to deliver superior energy efficiency and lower power consumption. These findings highlight the potential of heterogeneous AIMC architectures to enhance the efficiency and scalability of machine learning applications.",
+      "categories": [
+        "cs.LG",
+        "cs.AR"
+      ]
+    },
+    {
+      "id": "2410.00004",
+      "title": "Retro-li: Small-Scale Retrieval Augmented Generation Supporting Noisy Similarity Searches and Domain Shift Generalization",
+      "authors": [
+        "Gentiana Rashiti",
+        "Geethan Karunaratne",
+        "Mrinmaya Sachan",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2024-09-12",
+      "updated": "2025-03-26",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2410.00004",
+      "source": "arXiv",
+      "abstract": "The retrieval augmented generation (RAG) system such as Retro has been shown to improve language modeling capabilities and reduce toxicity and hallucinations by retrieving from a database of non-parametric memory containing trillions of entries. We introduce Retro-li that shows retrieval can also help using a small-scale database, but it demands more accurate and better neighbors when searching in a smaller hence sparser non-parametric memory. This can be met by using a proper semantic similarity search. We further propose adding a regularization to the non-parametric memory for the first time: it significantly reduces perplexity when the neighbor search operations are noisy during inference, and it improves generalization when a domain shift occurs. We also show that Retro-li's non-parametric memory can potentially be implemented on analog in-memory computing hardware, exhibiting O(1) search time while causing noise in retrieving neighbors, with minimal (<1%) performance loss. Our code is available at: https://github.com/IBM/Retrieval-Enhanced-Transformer-Little.",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "id": "2407.02060",
+      "title": "Terminating Differentiable Tree Experts",
+      "authors": [
+        "Jonathan Thomm",
+        "Michael Hersche",
+        "Giacomo Camposampiero",
+        "Aleksandar Terzić",
+        "Bernhard Schölkopf",
+        "Abbas Rahimi"
+      ],
+      "date": "2024-07-02",
+      "updated": "2024-07-02",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2407.02060",
+      "source": "arXiv",
+      "abstract": "We advance the recently proposed neuro-symbolic Differentiable Tree Machine, which learns tree operations using a combination of transformers and Tensor Product Representations. We investigate the architecture and propose two key components. We first remove a series of different transformer layers that are used in every step by introducing a mixture of experts. This results in a Differentiable Tree Experts model with a constant number of parameters for any arbitrary number of steps in the computation, compared to the previous method in the Differentiable Tree Machine with a linear growth. Given this flexibility in the number of steps, we additionally propose a new termination algorithm to provide the model the power to choose how many steps to make automatically. The resulting Terminating Differentiable Tree Experts model sluggishly learns to predict the number of steps without an oracle. It can do so while maintaining the learning capabilities of the model, converging to the optimal amount of steps.",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.SC"
+      ]
+    },
+    {
+      "id": "2406.19121",
+      "title": "Towards Learning Abductive Reasoning using VSA Distributed Representations",
+      "authors": [
+        "Giacomo Camposampiero",
+        "Michael Hersche",
+        "Aleksandar Terzić",
+        "Roger Wattenhofer",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2024-06-27",
+      "updated": "2024-08-30",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2406.19121",
+      "source": "arXiv",
+      "abstract": "We introduce the Abductive Rule Learner with Context-awareness (ARLC), a model that solves abstract reasoning tasks based on Learn-VRF. ARLC features a novel and more broadly applicable training objective for abductive reasoning, resulting in better interpretability and higher accuracy when solving Raven's progressive matrices (RPM). ARLC allows both programming domain knowledge and learning the rules underlying a data distribution. We evaluate ARLC on the I-RAVEN dataset, showcasing state-of-the-art accuracy across both in-distribution and out-of-distribution (unseen attribute-rule pairs) tests. ARLC surpasses neuro-symbolic and connectionist baselines, including large language models, despite having orders of magnitude fewer parameters. We show ARLC's robustness to post-programming training by incrementally learning from examples on top of programmed knowledge, which only improves its performance and does not result in catastrophic forgetting of the programmed solution. We validate ARLC's seamless transfer learning from a 2x2 RPM constellation to unseen constellations. Our code is available at https://github.com/IBM/abductive-rule-learner-with-context-awareness.",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.SC"
+      ]
+    },
+    {
+      "id": "2403.07851",
+      "title": "12 mJ per Class On-Device Online Few-Shot Class-Incremental Learning",
+      "authors": [
+        "Yoga Esa Wibowo",
+        "Cristian Cioflan",
+        "Thorir Mar Ingolfsson",
+        "Michael Hersche",
+        "Leo Zhao",
+        "Abbas Rahimi",
+        "Luca Benini"
+      ],
+      "date": "2024-03-12",
+      "updated": "2024-03-12",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2403.07851",
+      "source": "arXiv",
+      "abstract": "Few-Shot Class-Incremental Learning (FSCIL) enables machine learning systems to expand their inference capabilities to new classes using only a few labeled examples, without forgetting the previously learned classes. Classical backpropagation-based learning and its variants are often unsuitable for battery-powered, memory-constrained systems at the extreme edge. In this work, we introduce Online Few-Shot Class-Incremental Learning (O-FSCIL), based on a lightweight model consisting of a pretrained and metalearned feature extractor and an expandable explicit memory storing the class prototypes. The architecture is pretrained with a novel feature orthogonality regularization and metalearned with a multi-margin loss. For learning a new class, our approach extends the explicit memory with novel class prototypes, while the remaining architecture is kept frozen. This allows learning previously unseen classes based on only a few examples with one single pass (hence online). O-FSCIL obtains an average accuracy of 68.62% on the FSCIL CIFAR100 benchmark, achieving state-of-the-art results. Tailored for ultra-low-power platforms, we implement O-FSCIL on the 60 mW GAP9 microcontroller, demonstrating online learning capabilities within just 12 mJ per new class.",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "2402.05785",
+      "title": "Limits of Transformer Language Models on Learning to Compose Algorithms",
+      "authors": [
+        "Jonathan Thomm",
+        "Giacomo Camposampiero",
+        "Aleksandar Terzic",
+        "Michael Hersche",
+        "Bernhard Schölkopf",
+        "Abbas Rahimi"
+      ],
+      "date": "2024-02-08",
+      "updated": "2024-11-05",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2402.05785",
+      "source": "arXiv",
+      "abstract": "We analyze the capabilities of Transformer language models in learning compositional discrete tasks. To this end, we evaluate training LLaMA models and prompting GPT-4 and Gemini on four tasks demanding to learn a composition of several discrete sub-tasks. In particular, we measure how well these models can reuse primitives observable in the sub-tasks to learn the composition task. Our results indicate that compositional learning in state-of-the-art Transformer language models is highly sample inefficient: LLaMA requires more data samples than relearning all sub-tasks from scratch to learn the compositional task; in-context prompting with few samples is unreliable and fails at executing the sub-tasks or correcting the errors in multi-round code generation. Further, by leveraging complexity theory, we support these findings with a theoretical analysis focused on the sample inefficiency of gradient descent in memorizing feedforward models. We open source our code at https://github.com/IBM/limitations-lm-algorithmic-compositional-learning.",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ]
+    },
+    {
+      "id": "2401.16876",
+      "title": "Zero-shot Classification using Hyperdimensional Computing",
+      "authors": [
+        "Samuele Ruffino",
+        "Geethan Karunaratne",
+        "Michael Hersche",
+        "Luca Benini",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2024-01-30",
+      "updated": "2024-01-30",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2401.16876",
+      "source": "arXiv",
+      "abstract": "Classification based on Zero-shot Learning (ZSL) is the ability of a model to classify inputs into novel classes on which the model has not previously seen any training examples. Providing an auxiliary descriptor in the form of a set of attributes describing the new classes involved in the ZSL-based classification is one of the favored approaches to solving this challenging task. In this work, inspired by Hyperdimensional Computing (HDC), we propose the use of stationary binary codebooks of symbol-like distributed representations inside an attribute encoder to compactly represent a computationally simple end-to-end trainable model, which we name Hyperdimensional Computing Zero-shot Classifier~(HDC-ZSC). It consists of a trainable image encoder, an attribute encoder based on HDC, and a similarity kernel. We show that HDC-ZSC can be used to first perform zero-shot attribute extraction tasks and, can later be repurposed for Zero-shot Classification tasks with minimal architectural changes and minimal model retraining. HDC-ZSC achieves Pareto optimal results with a 63.8% top-1 classification accuracy on the CUB-200 dataset by having only 26.6 million trainable parameters. Compared to two other state-of-the-art non-generative approaches, HDC-ZSC achieves 4.3% and 9.9% better accuracy, while they require more than 1.85x and 1.72x parameters compared to HDC-ZSC, respectively.",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "2401.16024",
+      "title": "Probabilistic Abduction for Visual Abstract Reasoning via Learning Rules in Vector-symbolic Architectures",
+      "authors": [
+        "Michael Hersche",
+        "Francesco di Stefano",
+        "Thomas Hofmann",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2024-01-29",
+      "updated": "2024-01-29",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2401.16024",
+      "source": "arXiv",
+      "abstract": "Abstract reasoning is a cornerstone of human intelligence, and replicating it with artificial intelligence (AI) presents an ongoing challenge. This study focuses on efficiently solving Raven's progressive matrices (RPM), a visual test for assessing abstract reasoning abilities, by using distributed computation and operators provided by vector-symbolic architectures (VSA). Instead of hard-coding the rule formulations associated with RPMs, our approach can learn the VSA rule formulations (hence the name Learn-VRF) with just one pass through the training data. Yet, our approach, with compact parameters, remains transparent and interpretable. Learn-VRF yields accurate predictions on I-RAVEN's in-distribution data, and exhibits strong out-of-distribution capabilities concerning unseen attribute-rule pairs, significantly outperforming pure connectionist baselines including large language models. Our code is available at https://github.com/IBM/learn-vector-symbolic-architectures-rule-formulations.",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "2312.05605",
+      "title": "TCNCA: Temporal Convolution Network with Chunked Attention for Scalable Sequence Processing",
+      "authors": [
+        "Aleksandar Terzic",
+        "Michael Hersche",
+        "Geethan Karunaratne",
+        "Luca Benini",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2023-12-09",
+      "updated": "2023-12-09",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2312.05605",
+      "source": "arXiv",
+      "abstract": "MEGA is a recent transformer-based architecture, which utilizes a linear recurrent operator whose parallel computation, based on the FFT, scales as $O(LlogL)$, with $L$ being the sequence length. We build upon their approach by replacing the linear recurrence with a special temporal convolutional network which permits larger receptive field size with shallower networks, and reduces the computational complexity to $O(L)$. The resulting model is called TCNCA, a Temporal Convolutional Network with Chunked Attention. We evaluate TCNCA on EnWik8 language modeling, long-range-arena (LRA) sequence classification, as well as a synthetic reasoning benchmark associative recall. On EnWik8, TCNCA outperforms MEGA, reaching a lower loss with $1.37\\times$/$1.24\\times$ faster forward/backward pass during training. The dilated convolutions used in TCNCA are consistently and significantly faster operations than the FFT-based parallelized recurrence in GPUs, making them a scalable candidate for handling very large sequence lengths: they are up to $7.07\\times$/$2.86\\times$ faster in the forward/backward pass for sequences up to 131k. Further on LRA, TCNCA achieves, on average, $1.28\\times$ speed-up during inference with similar accuracy to what MEGA achieves. On associative recall, we find that even a simplified version of TCNCA, without excessive multiplicative and additive interactions, remains superior or competitive to MEGA on a range of sequence lengths and vocabulary sizes.",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "2312.02829",
+      "title": "MIMONets: Multiple-Input-Multiple-Output Neural Networks Exploiting Computation in Superposition",
+      "authors": [
+        "Nicolas Menet",
+        "Michael Hersche",
+        "Geethan Karunaratne",
+        "Luca Benini",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2023-12-05",
+      "updated": "2023-12-05",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2312.02829",
+      "source": "arXiv",
+      "abstract": "With the advent of deep learning, progressively larger neural networks have been designed to solve complex tasks. We take advantage of these capacity-rich models to lower the cost of inference by exploiting computation in superposition. To reduce the computational burden per input, we propose Multiple-Input-Multiple-Output Neural Networks (MIMONets) capable of handling many inputs at once. MIMONets augment various deep neural network architectures with variable binding mechanisms to represent an arbitrary number of inputs in a compositional data structure via fixed-width distributed representations. Accordingly, MIMONets adapt nonlinear neural transformations to process the data structure holistically, leading to a speedup nearly proportional to the number of superposed input items in the data structure. After processing in superposition, an unbinding mechanism recovers each transformed input of interest. MIMONets also provide a dynamic trade-off between accuracy and throughput by an instantaneous on-demand switching between a set of accuracy-throughput operating points, yet within a single set of fixed parameters. We apply the concept of MIMONets to both CNN and Transformer architectures resulting in MIMOConv and MIMOFormer, respectively. Empirical evaluations show that MIMOConv achieves about 2-4 x speedup at an accuracy delta within [+0.68, -3.18]% compared to WideResNet CNNs on CIFAR10 and CIFAR100. Similarly, MIMOFormer can handle 2-4 inputs at once while maintaining a high average accuracy within a [-1.07, -3.43]% delta on the long range arena benchmark. Finally, we provide mathematical bounds on the interference between superposition channels in MIMOFormer. Our code is available at https://github.com/IBM/multiple-input-multiple-output-nets.",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ]
+    },
+    {
+      "id": "2307.04599",
+      "title": "Bridging MDE and AI: A Systematic Review of Domain-Specific Languages and Model-Driven Practices in AI Software Systems Engineering",
+      "authors": [
+        "Simon Raedler",
+        "Luca Berardinelli",
+        "Karolin Winter",
+        "Abbas Rahimi",
+        "Stefanie Rinderle-Ma"
+      ],
+      "date": "2023-07-10",
+      "updated": "2024-05-06",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2307.04599",
+      "source": "arXiv",
+      "abstract": "Background:Technical systems are growing in complexity with more components and functions across various disciplines. Model-Driven Engineering (MDE) helps manage this complexity by using models as key artifacts. Domain-Specific Languages (DSL) supported by MDE facilitate modeling. As data generation in product development increases, there's a growing demand for AI algorithms, which can be challenging to implement. Integrating AI algorithms with DSL and MDE can streamline this process. Objective:This study aims to investigate the existing model-driven approaches relying on DSL in support of the engineering of AI software systems to sharpen future research further and define the current state of the art. Method:We conducted a Systemic Literature Review (SLR), collecting papers from five major databases resulting in 1335 candidate studies, eventually retaining 18 primary studies. Each primary study will be evaluated and discussed with respect to the adoption of MDE principles and practices and the phases of AI development support aligned with the stages of the CRISP-DM methodology. Results:The study's findings show that language workbenches are of paramount importance in dealing with all aspects of modeling language development and are leveraged to define DSL explicitly addressing AI concerns. The most prominent AI-related concerns are training and modeling of the AI algorithm, while minor emphasis is given to the time-consuming preparation of the data. Early project phases that support interdisciplinary communication of requirements, e.g., CRISP-DM Business Understanding phase, are rarely reflected. Conclusion:The study found that the use of MDE for AI is still in its early stages, and there is no single tool or method that is widely used. Additionally, current approaches tend to focus on specific stages of development rather than providing support for the entire development process.",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "2303.13957",
+      "title": "Factorizers for Distributed Sparse Block Codes",
+      "authors": [
+        "Michael Hersche",
+        "Aleksandar Terzic",
+        "Geethan Karunaratne",
+        "Jovin Langenegger",
+        "Angéline Pouget",
+        "Giovanni Cherubini",
+        "Luca Benini",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2023-03-24",
+      "updated": "2024-05-28",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2303.13957",
+      "source": "arXiv",
+      "abstract": "Distributed sparse block codes (SBCs) exhibit compact representations for encoding and manipulating symbolic data structures using fixed-width vectors. One major challenge however is to disentangle, or factorize, the distributed representation of data structures into their constituent elements without having to search through all possible combinations. This factorization becomes more challenging when SBCs vectors are noisy due to perceptual uncertainty and approximations made by modern neural networks to generate the query SBCs vectors. To address these challenges, we first propose a fast and highly accurate method for factorizing a more flexible and hence generalized form of SBCs, dubbed GSBCs. Our iterative factorizer introduces a threshold-based nonlinear activation, conditional random sampling, and an $\\ell_\\infty$-based similarity metric. Secondly, the proposed factorizer maintains a high accuracy when queried by noisy product vectors generated using deep convolutional neural networks (CNNs). This facilitates its application in replacing the large fully connected layer (FCL) in CNNs, whereby $C$ trainable class vectors, or attribute combinations, can be implicitly represented by our factorizer having $F$-factor codebooks, each with $\\sqrt[\\leftroot{-2}\\uproot{2}F]{C}$ fixed codevectors. We provide a methodology to flexibly integrate our factorizer in the classification layer of CNNs with a novel loss function. With this integration, the convolutional layers can generate a noisy product vector that our factorizer can still decode, whereby the decoded factors can have different interpretations based on downstream tasks. We demonstrate the feasibility of our method on four deep CNN architectures over CIFAR-100, ImageNet-1K, and RAVEN datasets. In all use cases, the number of parameters and operations are notably reduced compared to the FCL.",
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.NE"
+      ]
+    },
+    {
+      "id": "2303.08067",
+      "title": "WHYPE: A Scale-Out Architecture with Wireless Over-the-Air Majority for Scalable In-memory Hyperdimensional Computing",
+      "authors": [
+        "Robert Guirado",
+        "Abbas Rahimi",
+        "Geethan Karunaratne",
+        "Eduard Alarcón",
+        "Abu Sebastian",
+        "Sergi Abadal"
+      ],
+      "date": "2023-02-04",
+      "updated": "2023-02-04",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2303.08067",
+      "source": "arXiv",
+      "abstract": "Hyperdimensional computing (HDC) is an emerging computing paradigm that represents, manipulates, and communicates data using long random vectors known as hypervectors. Among different hardware platforms capable of executing HDC algorithms, in-memory computing (IMC) has shown promise as it is very efficient in performing matrix-vector multiplications, which are common in the HDC algebra. Although HDC architectures based on IMC already exist, how to scale them remains a key challenge due to collective communication patterns that these architectures required and that traditional chip-scale networks were not designed for. To cope with this difficulty, we propose a scale-out HDC architecture called WHYPE, which uses wireless in-package communication technology to interconnect a large number of physically distributed IMC cores that either encode hypervectors or perform multiple similarity searches in parallel. In this context, the key enabler of WHYPE is the opportunistic use of the wireless network as a medium for over-the-air computation. WHYPE implements an optimized source coding that allows receivers to calculate the bit-wise majority of multiple hypervectors (a useful operation in HDC) being transmitted concurrently over the wireless channel. By doing so, we achieve a joint broadcast distribution and computation with a performance and efficiency unattainable with wired interconnects, which in turn enables massive parallelization of the architecture. Through evaluations at the on-chip network and complete architecture levels, we demonstrate that WHYPE can bundle and distribute hypervectors faster and more efficiently than a hypothetical wired implementation, and that it scales well to tens of receivers. We show that the average error rate of the majority computation is low, such that it has negligible impact on the accuracy of HDC classification tasks.",
+      "categories": [
+        "cs.DC"
+      ]
+    },
+    {
+      "id": "2211.05052",
+      "title": "In-memory factorization of holographic perceptual representations",
+      "authors": [
+        "Jovin Langenegger",
+        "Geethan Karunaratne",
+        "Michael Hersche",
+        "Luca Benini",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2022-11-09",
+      "updated": "2023-02-16",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2211.05052",
+      "source": "arXiv",
+      "abstract": "Disentanglement of constituent factors of a sensory signal is central to perception and cognition and hence is a critical task for future artificial intelligence systems. In this paper, we present a compute engine capable of efficiently factorizing holographic perceptual representations by exploiting the computation-in-superposition capability of brain-inspired hyperdimensional computing and the intrinsic stochasticity associated with analog in-memory computing based on nanoscale memristive devices. Such an iterative in-memory factorizer is shown to solve at least five orders of magnitude larger problems that cannot be solved otherwise, while also significantly lowering the computational time and space complexity. We present a large-scale experimental demonstration of the factorizer by employing two in-memory compute chips based on phase-change memristive devices. The dominant matrix-vector multiply operations are executed at O(1) thus reducing the computational time complexity to merely the number of iterations. Moreover, we experimentally demonstrate the ability to factorize visual perceptual representations reliably and efficiently.",
+      "categories": [
+        "cs.ET",
+        "cs.CV",
+        "cs.LG",
+        "cs.NE"
+      ]
+    },
+    {
+      "id": "2207.06810",
+      "title": "In-memory Realization of In-situ Few-shot Continual Learning with a Dynamically Evolving Explicit Memory",
+      "authors": [
+        "Geethan Karunaratne",
+        "Michael Hersche",
+        "Jovin Langenegger",
+        "Giovanni Cherubini",
+        "Manuel Le Gallo-Bourdeau",
+        "Urs Egger",
+        "Kevin Brew",
+        "Sam Choi",
+        "INJO OK",
+        "Mary Claire Silvestre",
+        "Ning Li",
+        "Nicole Saulnier",
+        "Victor Chan",
+        "Ishtiaq Ahsan",
+        "Vijay Narayanan",
+        "Luca Benini",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2022-07-14",
+      "updated": "2022-07-14",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2207.06810",
+      "source": "arXiv",
+      "abstract": "Continually learning new classes from a few training examples without forgetting previous old classes demands a flexible architecture with an inevitably growing portion of storage, in which new examples and classes can be incrementally stored and efficiently retrieved. One viable architectural solution is to tightly couple a stationary deep neural network to a dynamically evolving explicit memory (EM). As the centerpiece of this architecture, we propose an EM unit that leverages energy-efficient in-memory compute (IMC) cores during the course of continual learning operations. We demonstrate for the first time how the EM unit can physically superpose multiple training examples, expand to accommodate unseen classes, and perform similarity search during inference, using operations on an IMC core based on phase-change memory (PCM). Specifically, the physical superposition of a few encoded training examples is realized via in-situ progressive crystallization of PCM devices. The classification accuracy achieved on the IMC core remains within a range of 1.28%--2.5% compared to that of the state-of-the-art full-precision baseline software model on both the CIFAR-100 and miniImageNet datasets when continually learning 40 novel classes (from only five examples per class) on top of 60 old classes.",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "2205.10889",
+      "title": "Wireless On-Chip Communications for Scalable In-memory Hyperdimensional Computing",
+      "authors": [
+        "Robert Guirado",
+        "Abbas Rahimi",
+        "Geethan Karunaratne",
+        "Eduard Alarcón",
+        "Abu Sebastian",
+        "Sergi Abadal"
+      ],
+      "date": "2022-05-22",
+      "updated": "2022-05-22",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2205.10889",
+      "source": "arXiv",
+      "abstract": "Hyperdimensional computing (HDC) is an emerging computing paradigm that represents, manipulates, and communicates data using very long random vectors (aka hypervectors). Among different hardware platforms capable of executing HDC algorithms, in-memory computing (IMC) systems have been recently proved to be one of the most energy-efficient options, due to hypervector manipulations in the memory itself that reduces data movement. Although implementations of HDC on single IMC cores have been made, their parallelization is still unresolved due to the communication challenges that these novel architectures impose and that traditional Networks-on-Chip and Networks-in-Package were not designed for. To cope with this difficulty, we propose the use of wireless on-chip communication technology in unique ways. We are particularly interested in physically distributing a large number of IMC cores performing similarity search across a chip, and maintaining the classification accuracy when each of which is queried with a slightly different version of a bundled hypervector. To achieve it, we introduce a novel over-the-air computing that consists of defining different binary decision regions in the receivers so as to compute the logical majority operation (i.e., bundling, or superposition) required in HDC. It introduces moderate overheads of a single antenna and receiver per IMC core. By doing so, we achieve a joint broadcast distribution and computation with a performance and efficiency unattainable with wired interconnects, which in turn enables massive parallelization of the architecture. It is demonstrated that the proposed approach allows to both bundle at least three hypervectors and scale similarity search to 64 IMC cores seamlessly, while incurring an average bit error ratio of 0.01 without any impact in the accuracy of a generic HDC-based classifier working with 512-bit vectors.",
+      "categories": [
+        "cs.AR"
+      ]
+    },
+    {
+      "id": "2203.16588",
+      "title": "Constrained Few-shot Class-incremental Learning",
+      "authors": [
+        "Michael Hersche",
+        "Geethan Karunaratne",
+        "Giovanni Cherubini",
+        "Luca Benini",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2022-03-30",
+      "updated": "2022-03-30",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2203.16588",
+      "source": "arXiv",
+      "abstract": "Continually learning new classes from fresh data without forgetting previous knowledge of old classes is a very challenging research problem. Moreover, it is imperative that such learning must respect certain memory and computational constraints such as (i) training samples are limited to only a few per class, (ii) the computational cost of learning a novel class remains constant, and (iii) the memory footprint of the model grows at most linearly with the number of classes observed. To meet the above constraints, we propose C-FSCIL, which is architecturally composed of a frozen meta-learned feature extractor, a trainable fixed-size fully connected layer, and a rewritable dynamically growing memory that stores as many vectors as the number of encountered classes. C-FSCIL provides three update modes that offer a trade-off between accuracy and compute-memory cost of learning novel classes. C-FSCIL exploits hyperdimensional embedding that allows to continually express many more classes than the fixed dimensions in the vector space, with minimal interference. The quality of class vector representations is further improved by aligning them quasi-orthogonally to each other by means of novel loss functions. Experiments on the CIFAR100, miniImageNet, and Omniglot datasets show that C-FSCIL outperforms the baselines with remarkable accuracy and compression. It also scales up to the largest problem size ever tried in this few-shot setting by learning 423 novel classes on top of 1200 base classes with less than 1.6% accuracy drop. Our code is available at https://github.com/IBM/constrained-FSCIL.",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "2203.06223",
+      "title": "Generalized Key-Value Memory to Flexibly Adjust Redundancy in Memory-Augmented Networks",
+      "authors": [
+        "Denis Kleyko",
+        "Geethan Karunaratne",
+        "Jan M. Rabaey",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2022-03-11",
+      "updated": "2022-03-11",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2203.06223",
+      "source": "arXiv",
+      "abstract": "Memory-augmented neural networks enhance a neural network with an external key-value memory whose complexity is typically dominated by the number of support vectors in the key memory. We propose a generalized key-value memory that decouples its dimension from the number of support vectors by introducing a free parameter that can arbitrarily add or remove redundancy to the key memory representation. In effect, it provides an additional degree of freedom to flexibly control the trade-off between robustness and the resources required to store and compute the generalized key-value memory. This is particularly useful for realizing the key memory on in-memory computing hardware where it exploits nonideal, but extremely efficient non-volatile memory devices for dense storage and computation. Experimental results show that adapting this parameter on demand effectively mitigates up to 44% nonidealities, at equal accuracy and number of devices, without any need for neural network retraining.",
+      "categories": [
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "2203.04571",
+      "title": "A Neuro-vector-symbolic Architecture for Solving Raven's Progressive Matrices",
+      "authors": [
+        "Michael Hersche",
+        "Mustafa Zeqiri",
+        "Luca Benini",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2022-03-09",
+      "updated": "2023-03-03",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2203.04571",
+      "source": "arXiv",
+      "abstract": "Neither deep neural networks nor symbolic AI alone has approached the kind of intelligence expressed in humans. This is mainly because neural networks are not able to decompose joint representations to obtain distinct objects (the so-called binding problem), while symbolic AI suffers from exhaustive rule searches, among other problems. These two problems are still pronounced in neuro-symbolic AI which aims to combine the best of the two paradigms. Here, we show that the two problems can be addressed with our proposed neuro-vector-symbolic architecture (NVSA) by exploiting its powerful operators on high-dimensional distributed representations that serve as a common language between neural networks and symbolic AI. The efficacy of NVSA is demonstrated by solving the Raven's progressive matrices datasets. Compared to state-of-the-art deep neural network and neuro-symbolic approaches, end-to-end training of NVSA achieves a new record of 87.7% average accuracy in RAVEN, and 88.1% in I-RAVEN datasets. Moreover, compared to the symbolic reasoning within the neuro-symbolic approaches, the probabilistic reasoning of NVSA with less expensive operations on the distributed representations is two orders of magnitude faster. Our code is available at https://github.com/IBM/neuro-vector-symbolic-architectures.",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "2112.15424",
+      "title": "A Survey on Hyperdimensional Computing aka Vector Symbolic Architectures, Part II: Applications, Cognitive Models, and Challenges",
+      "authors": [
+        "Denis Kleyko",
+        "Dmitri A. Rachkovskij",
+        "Evgeny Osipov",
+        "Abbas Rahimi"
+      ],
+      "date": "2021-11-12",
+      "updated": "2023-08-01",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2112.15424",
+      "source": "arXiv",
+      "abstract": "This is Part II of the two-part comprehensive survey devoted to a computing framework most commonly known under the names Hyperdimensional Computing and Vector Symbolic Architectures (HDC/VSA). Both names refer to a family of computational models that use high-dimensional distributed representations and rely on the algebraic properties of their key operations to incorporate the advantages of structured symbolic representations and vector distributed representations. Holographic Reduced Representations is an influential HDC/VSA model that is well-known in the machine learning domain and often used to refer to the whole family. However, for the sake of consistency, we use HDC/VSA to refer to the field. Part I of this survey covered foundational aspects of the field, such as the historical context leading to the development of HDC/VSA, key elements of any HDC/VSA model, known HDC/VSA models, and the transformation of input data of various types into high-dimensional vectors suitable for HDC/VSA. This second part surveys existing applications, the role of HDC/VSA in cognitive computing and architectures, as well as directions for future work. Most of the applications lie within the Machine Learning/Artificial Intelligence domain, however, we also cover other applications to provide a complete picture. The survey is written to be useful for both newcomers and practitioners.",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "2111.06077",
+      "title": "A Survey on Hyperdimensional Computing aka Vector Symbolic Architectures, Part I: Models and Data Transformations",
+      "authors": [
+        "Denis Kleyko",
+        "Dmitri A. Rachkovskij",
+        "Evgeny Osipov",
+        "Abbas Rahimi"
+      ],
+      "date": "2021-11-11",
+      "updated": "2023-07-31",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2111.06077",
+      "source": "arXiv",
+      "abstract": "This two-part comprehensive survey is devoted to a computing framework most commonly known under the names Hyperdimensional Computing and Vector Symbolic Architectures (HDC/VSA). Both names refer to a family of computational models that use high-dimensional distributed representations and rely on the algebraic properties of their key operations to incorporate the advantages of structured symbolic representations and vector distributed representations. Notable models in the HDC/VSA family are Tensor Product Representations, Holographic Reduced Representations, Multiply-Add-Permute, Binary Spatter Codes, and Sparse Binary Distributed Representations but there are other models too. HDC/VSA is a highly interdisciplinary field with connections to computer science, electrical engineering, artificial intelligence, mathematics, and cognitive science. This fact makes it challenging to create a thorough overview of the field. However, due to a surge of new researchers joining the field in recent years, the necessity for a comprehensive survey of the field has become extremely important. Therefore, amongst other aspects of the field, this Part I surveys important aspects such as: known computational models of HDC/VSA and transformations of various input data types to high-dimensional distributed representations. Part II of this survey is devoted to applications, cognitive computing and architectures, as well as directions for future work. The survey is written to be useful for both newcomers and practitioners.",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "2106.11654",
+      "title": "Energy Efficient In-memory Hyperdimensional Encoding for Spatio-temporal Signal Processing",
+      "authors": [
+        "Geethan Karunaratne",
+        "Manuel Le Gallo",
+        "Michael Hersche",
+        "Giovanni Cherubini",
+        "Luca Benini",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2021-06-22",
+      "updated": "2021-06-22",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2106.11654",
+      "source": "arXiv",
+      "abstract": "The emerging brain-inspired computing paradigm known as hyperdimensional computing (HDC) has been proven to provide a lightweight learning framework for various cognitive tasks compared to the widely used deep learning-based approaches. Spatio-temporal (ST) signal processing, which encompasses biosignals such as electromyography (EMG) and electroencephalography (EEG), is one family of applications that could benefit from an HDC-based learning framework. At the core of HDC lie manipulations and comparisons of large bit patterns, which are inherently ill-suited to conventional computing platforms based on the von-Neumann architecture. In this work, we propose an architecture for ST signal processing within the HDC framework using predominantly in-memory compute arrays. In particular, we introduce a methodology for the in-memory hyperdimensional encoding of ST data to be used together with an in-memory associative search module. We show that the in-memory HDC encoder for ST signals offers at least 1.80x energy efficiency gains, 3.36x area gains, as well as 9.74x throughput gains compared with a dedicated digital hardware implementation. At the same time it achieves a peak classification accuracy within 0.04% of that of the baseline HDC framework.",
+      "categories": [
+        "cs.ET"
+      ]
+    },
+    {
+      "id": "2106.05268",
+      "title": "Vector Symbolic Architectures as a Computing Framework for Emerging Hardware",
+      "authors": [
+        "Denis Kleyko",
+        "Mike Davies",
+        "E. Paxon Frady",
+        "Pentti Kanerva",
+        "Spencer J. Kent",
+        "Bruno A. Olshausen",
+        "Evgeny Osipov",
+        "Jan M. Rabaey",
+        "Dmitri A. Rachkovskij",
+        "Abbas Rahimi",
+        "Friedrich T. Sommer"
+      ],
+      "date": "2021-06-09",
+      "updated": "2023-07-20",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2106.05268",
+      "source": "arXiv",
+      "abstract": "This article reviews recent progress in the development of the computing framework vector symbolic architectures (VSA) (also known as hyperdimensional computing). This framework is well suited for implementation in stochastic, emerging hardware, and it naturally expresses the types of cognitive operations required for artificial intelligence (AI). We demonstrate in this article that the field-like algebraic structure of VSA offers simple but powerful operations on high-dimensional vectors that can support all data structures and manipulations relevant to modern computing. In addition, we illustrate the distinguishing feature of VSA, \"computing in superposition,\" which sets it apart from conventional computing. It also opens the door to efficient solutions to the difficult combinatorial search problems inherent in AI applications. We sketch ways of demonstrating that VSA are computationally universal. We see them acting as a framework for computing with distributed representations that can play a role of an abstraction layer for emerging computing hardware. This article serves as a reference for computer architects by illustrating the philosophy behind VSA, techniques of distributed computing with them, and their relevance to emerging computing hardware, such as neuromorphic computing.",
+      "categories": [
+        "cs.AR",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "2102.02758",
+      "title": "A 5 μW Standard Cell Memory-based Configurable Hyperdimensional Computing Accelerator for Always-on Smart Sensing",
+      "authors": [
+        "Manuel Eggimann",
+        "Abbas Rahimi",
+        "Luca Benini"
+      ],
+      "date": "2021-02-04",
+      "updated": "2021-02-04",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2102.02758",
+      "source": "arXiv",
+      "abstract": "Hyperdimensional computing (HDC) is a brain-inspired computing paradigm based on high-dimensional holistic representations of vectors. It recently gained attention for embedded smart sensing due to its inherent error-resiliency and suitability to highly parallel hardware implementations. In this work, we propose a programmable all-digital CMOS implementation of a fully autonomous HDC accelerator for always-on classification in energy-constrained sensor nodes. By using energy-efficient standard cell memory (SCM), the design is easily cross-technology mappable. It achieves extremely low power, 5 $μW$ in typical applications, and an energy-efficiency improvement over the state-of-the-art (SoA) digital architectures of up to 3$\\times$ in post-layout simulations for always-on wearable tasks such as EMG gesture recognition. As part of the accelerator's architecture, we introduce novel hardware-friendly embodiments of common HDC-algorithmic primitives, which results in 3.3$\\times$ technology scaled area reduction over the SoA, achieving the same accuracy levels in all examined targets. The proposed architecture also has a fully configurable datapath using microcode optimized for HDC stored on an integrated SCM based configuration memory, making the design \"general-purpose\" in terms of HDC algorithm flexibility. This flexibility allows usage of the accelerator across novel HDC tasks, for instance, a newly designed HDC applied to the task of ball bearing fault detection.",
+      "categories": [
+        "eess.SP",
+        "cs.AI",
+        "eess.SY"
+      ]
+    },
+    {
+      "id": "2010.07004",
+      "title": "Binarization Methods for Motor-Imagery Brain-Computer Interface Classification",
+      "authors": [
+        "Michael Hersche",
+        "Luca Benini",
+        "Abbas Rahimi"
+      ],
+      "date": "2020-10-14",
+      "updated": "2020-10-14",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2010.07004",
+      "source": "arXiv",
+      "abstract": "Successful motor-imagery brain-computer interface (MI-BCI) algorithms either extract a large number of handcrafted features and train a classifier, or combine feature extraction and classification within deep convolutional neural networks (CNNs). Both approaches typically result in a set of real-valued weights, that pose challenges when targeting real-time execution on tightly resource-constrained devices. We propose methods for each of these approaches that allow transforming real-valued weights to binary numbers for efficient inference. Our first method, based on sparse bipolar random projection, projects a large number of real-valued Riemannian covariance features to a binary space, where a linear SVM classifier can be learned with binary weights too. By tuning the dimension of the binary embedding, we achieve almost the same accuracy in 4-class MI ($\\leq$1.27% lower) compared to models with float16 weights, yet delivering a more compact model with simpler operations to execute. Second, we propose to use memory-augmented neural networks (MANNs) for MI-BCI such that the augmented memory is binarized. Our method replaces the fully connected layer of CNNs with a binary augmented memory using bipolar random projection, or learned projection. Our experimental results on EEGNet, an already compact CNN for MI-BCI, show that it can be compressed by 1.28x at iso-accuracy using the random projection. On the other hand, using the learned projection provides 3.89% higher accuracy but increases the memory size by 28.10x.",
+      "categories": [
+        "eess.SP",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "2010.01939",
+      "title": "Robust High-dimensional Memory-augmented Neural Networks",
+      "authors": [
+        "Geethan Karunaratne",
+        "Manuel Schmuck",
+        "Manuel Le Gallo",
+        "Giovanni Cherubini",
+        "Luca Benini",
+        "Abu Sebastian",
+        "Abbas Rahimi"
+      ],
+      "date": "2020-10-05",
+      "updated": "2021-03-19",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2010.01939",
+      "source": "arXiv",
+      "abstract": "Traditional neural networks require enormous amounts of data to build their complex mappings during a slow training procedure that hinders their abilities for relearning and adapting to new data. Memory-augmented neural networks enhance neural networks with an explicit memory to overcome these issues. Access to this explicit memory, however, occurs via soft read and write operations involving every individual memory entry, resulting in a bottleneck when implemented using the conventional von Neumann computer architecture. To overcome this bottleneck, we propose a robust architecture that employs a computational memory unit as the explicit memory performing analog in-memory computation on high-dimensional (HD) vectors, while closely matching 32-bit software-equivalent accuracy. This is achieved by a content-based attention mechanism that represents unrelated items in the computational memory with uncorrelated HD vectors, whose real-valued components can be readily approximated by binary, or bipolar components. Experimental results demonstrate the efficacy of our approach on few-shot image classification tasks on the Omniglot dataset using more than 256,000 phase-change memory devices. Our approach effectively merges the richness of deep neural network representations with HD computing that paves the way for robust vector-symbolic manipulations applicable in reasoning, fusion, and compression.",
+      "categories": [
+        "cs.ET",
+        "cs.LG",
+        "cs.NE"
+      ]
+    },
+    {
+      "id": "1906.01548",
+      "title": "In-memory hyperdimensional computing",
+      "authors": [
+        "Geethan Karunaratne",
+        "Manuel Le Gallo",
+        "Giovanni Cherubini",
+        "Luca Benini",
+        "Abbas Rahimi",
+        "Abu Sebastian"
+      ],
+      "date": "2019-06-04",
+      "updated": "2020-04-09",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/1906.01548",
+      "source": "arXiv",
+      "abstract": "Hyperdimensional computing (HDC) is an emerging computational framework that takes inspiration from attributes of neuronal circuits such as hyperdimensionality, fully distributed holographic representation, and (pseudo)randomness. When employed for machine learning tasks such as learning and classification, HDC involves manipulation and comparison of large patterns within memory. Moreover, a key attribute of HDC is its robustness to the imperfections associated with the computational substrates on which it is implemented. It is therefore particularly amenable to emerging non-von Neumann paradigms such as in-memory computing, where the physical attributes of nanoscale memristive devices are exploited to perform computation in place. Here, we present a complete in-memory HDC system that achieves a near optimum trade-off between design complexity and classification accuracy based on three prototypical HDC related learning tasks, namely, language classification, news classification, and hand gesture recognition from electromyography signals. Comparable accuracies to software implementations are demonstrated, experimentally, using 760,000 phase-change memory devices performing analog in-memory computing.",
+      "categories": [
+        "cs.ET",
+        "cs.AI",
+        "physics.app-ph"
+      ]
+    },
+    {
+      "id": "1901.00234",
+      "title": "Analysis of Contraction Effort Level in EMG-Based Gesture Recognition Using Hyperdimensional Computing",
+      "authors": [
+        "Ali Moin",
+        "Andy Zhou",
+        "Simone Benatti",
+        "Abbas Rahimi",
+        "Luca Benini",
+        "Jan M. Rabaey"
+      ],
+      "date": "2019-01-02",
+      "updated": "2019-08-30",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/1901.00234",
+      "source": "arXiv",
+      "abstract": "Varying contraction levels of muscles is a big challenge in electromyography-based gesture recognition. Some use cases require the classifier to be robust against varying force changes, while others demand to distinguish between different effort levels of performing the same gesture. We use brain-inspired hyperdimensional computing paradigm to build classification models that are both robust to these variations and able to recognize multiple contraction levels. Experimental results on 5 subjects performing 9 gestures with 3 effort levels show up to 39.17% accuracy drop when training and testing across different effort levels, with up to 30.35% recovery after applying our algorithm.",
+      "categories": [
+        "cs.HC",
+        "cs.LG",
+        "eess.SP"
+      ]
+    },
+    {
+      "id": "1812.05705",
+      "title": "Exploring Embedding Methods in Binary Hyperdimensional Computing: A Case Study for Motor-Imagery based Brain-Computer Interfaces",
+      "authors": [
+        "Michael Hersche",
+        "José del R. Millán",
+        "Luca Benini",
+        "Abbas Rahimi"
+      ],
+      "date": "2018-12-13",
+      "updated": "2018-12-30",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/1812.05705",
+      "source": "arXiv",
+      "abstract": "Key properties of brain-inspired hyperdimensional (HD) computing make it a prime candidate for energy-efficient and fast learning in biosignal processing. The main challenge is however to formulate embedding methods that map biosignal measures to a binary HD space. In this paper, we explore variety of such embedding methods and examine them with a challenging application of motor imagery brain-computer interface (MI-BCI) from electroencephalography (EEG) recordings. We explore embedding methods including random projections, quantization based thermometer and Gray coding, and learning HD representations using end-to-end training. All these methods, differing in complexity, aim to represent EEG signals in binary HD space, e.g. with 10,000 bits. This leads to development of a set of HD learning and classification methods that can be selectively chosen (or configured) based on accuracy and/or computational complexity requirements of a given task. We compare them with state-of-the-art linear support vector machine (SVM) on an NVIDIA TX2 board using the 4-class BCI competition IV-2a dataset as well as a new 3-class dataset. Compared to SVM, results on 3-class dataset show that simple thermometer embedding achieves moderate average accuracy (79.56% vs. 82.67%) with 26.8$\\times$ faster training time and 22.3$\\times$ lower energy; on the other hand, switching to end-to-end training with learned HD representations wipes out these training benefits while boosting the accuracy to 84.22% (1.55% higher than SVM). Similar trend is observed on the 4-class dataset where SVM achieves on average 74.29%: the thermometer embedding achieves 89.9$\\times$ faster training time and 58.7$\\times$ lower energy, but a lower accuracy (67.09%) than the learned representation of 72.54%.",
+      "categories": [
+        "eess.SP",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "1811.09557",
+      "title": "Hyperdimensional Computing Nanosystem",
+      "authors": [
+        "Abbas Rahimi",
+        "Tony F. Wu",
+        "Haitong Li",
+        "Jan M. Rabaey",
+        "H. -S. Philip Wong",
+        "Max M. Shulaker",
+        "Subhasish Mitra"
+      ],
+      "date": "2018-11-23",
+      "updated": "2018-11-23",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/1811.09557",
+      "source": "arXiv",
+      "abstract": "One viable solution for continuous reduction in energy-per-operation is to rethink functionality to cope with uncertainty by adopting computational approaches that are inherently robust to uncertainty. It requires a novel look at data representations, associated operations, and circuits, and at materials and substrates that enable them. 3D integrated nanotechnologies combined with novel brain-inspired computational paradigms that support fast learning and fault tolerance could lead the way. Recognizing the very size of the brain's circuits, hyperdimensional (HD) computing can model neural activity patterns with points in a HD space, that is, with hypervectors as large randomly generated patterns. At its very core, HD computing is about manipulating and comparing these patterns inside memory. Emerging nanotechnologies such as carbon nanotube field effect transistors (CNFETs) and resistive RAM (RRAM), and their monolithic 3D integration offer opportunities for hardware implementations of HD computing through tight integration of logic and memory, energy-efficient computation, and unique device characteristics. We experimentally demonstrate and characterize an end-to-end HD computing nanosystem built using monolithic 3D integration of CNFETs and RRAM. With our nanosystem, we experimentally demonstrate classification of 21 languages with measured accuracy of up to 98% on >20,000 sentences (6.4 million characters), training using one text sample (~100,000 characters) per language, and resilient operation (98% accuracy) despite 78% hardware errors in HD representation (outputs stuck at 0 or 1). By exploiting the unique properties of the underlying nanotechnologies, we show that HD computing, when implemented with monolithic 3D integration, can be up to 420X more energy-efficient while using 25X less area compared to traditional silicon CMOS implementations.",
+      "categories": [
+        "cs.ET",
+        "cs.AR",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "1809.01926",
+      "title": "One-shot Learning for iEEG Seizure Detection Using End-to-end Binary Operations: Local Binary Patterns with Hyperdimensional Computing",
+      "authors": [
+        "Alessio Burrello",
+        "Kaspar Schindler",
+        "Luca Benini",
+        "Abbas Rahimi"
+      ],
+      "date": "2018-09-06",
+      "updated": "2018-09-06",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/1809.01926",
+      "source": "arXiv",
+      "abstract": "This paper presents an efficient binarized algorithm for both learning and classification of human epileptic seizures from intracranial electroencephalography (iEEG). The algorithm combines local binary patterns with brain-inspired hyperdimensional computing to enable end-to-end learning and inference with binary operations. The algorithm first transforms iEEG time series from each electrode into local binary pattern codes. Then atomic high-dimensional binary vectors are used to construct composite representations of seizures across all electrodes. For the majority of our patients (10 out of 16), the algorithm quickly learns from one or two seizures (i.e., one-/few-shot learning) and perfectly generalizes on 27 further seizures. For other patients, the algorithm requires three to six seizures for learning. Overall, our algorithm surpasses the state-of-the-art methods for detecting 65 novel seizures with higher specificity and sensitivity, and lower memory footprint.",
+      "categories": [
+        "eess.SP",
+        "cs.LG",
+        "q-bio.NC",
+        "stat.ML"
+      ]
+    },
+    {
+      "id": "1807.08583",
+      "title": "Hardware Optimizations of Dense Binary Hyperdimensional Computing: Rematerialization of Hypervectors, Binarized Bundling, and Combinational Associative Memory",
+      "authors": [
+        "Manuel Schmuck",
+        "Luca Benini",
+        "Abbas Rahimi"
+      ],
+      "date": "2018-07-20",
+      "updated": "2019-04-03",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/1807.08583",
+      "source": "arXiv",
+      "abstract": "Brain-inspired hyperdimensional (HD) computing models neural activity patterns of the very size of the brain's circuits with points of a hyperdimensional space, that is, with hypervectors. Hypervectors are $D$-dimensional (pseudo)random vectors with independent and identically distributed (i.i.d.) components constituting ultra-wide holographic words: $D = 10,000$ bits, for instance. At its very core, HD computing manipulates a set of seed hypervectors to build composite hypervectors representing objects of interest. It demands memory optimizations with simple operations for an e cient hardware realization. In this paper, we propose hardware techniques for optimizations of HD computing, in a synthesizable VHDL library, to enable co-located implementation of both learning and classification tasks on only a small portion of Xilinx(R) UltraScale(TM) FPGAs: (1) We propose simple logical operations to rematerialize the hypervectors on the fly rather than loading them from memory. These operations massively reduce the memory footprint by directly computing the composite hypervectors whose individual seed hypervectors do not need to be stored in memory. (2) Bundling a series of hypervectors over time requires a multibit counter per every hypervector component. We instead propose a binarized back-to-back bundling without requiring any counters. This truly enables on-chip learning with minimal resources as every hypervector component remains binary over the course of training to avoid otherwise multibit component. (3) For every classification event, an associative memory is in charge of finding the closest match between a set of learned hypervectors and a query hypervector by using a distance metric. This operator is proportional to [...]",
+      "categories": [
+        "cs.ET",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "1806.06823",
+      "title": "Fast and Accurate Multiclass Inference for MI-BCIs Using Large Multiscale Temporal and Spectral Features",
+      "authors": [
+        "Michael Hersche",
+        "Tino Rellstab",
+        "Pasquale Davide Schiavone",
+        "Lukas Cavigelli",
+        "Luca Benini",
+        "Abbas Rahimi"
+      ],
+      "date": "2018-06-18",
+      "updated": "2018-12-12",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/1806.06823",
+      "source": "arXiv",
+      "abstract": "Accurate, fast, and reliable multiclass classification of electroencephalography (EEG) signals is a challenging task towards the development of motor imagery brain-computer interface (MI-BCI) systems. We propose enhancements to different feature extractors, along with a support vector machine (SVM) classifier, to simultaneously improve classification accuracy and execution time during training and testing. We focus on the well-known common spatial pattern (CSP) and Riemannian covariance methods, and significantly extend these two feature extractors to multiscale temporal and spectral cases. The multiscale CSP features achieve 73.70$\\pm$15.90% (mean$\\pm$ standard deviation across 9 subjects) classification accuracy that surpasses the state-of-the-art method [1], 70.6$\\pm$14.70%, on the 4-class BCI competition IV-2a dataset. The Riemannian covariance features outperform the CSP by achieving 74.27$\\pm$15.5% accuracy and executing 9x faster in training and 4x faster in testing. Using more temporal windows for Riemannian features results in 75.47$\\pm$12.8% accuracy with 1.6x faster testing than CSP.",
+      "categories": [
+        "eess.SP",
+        "q-bio.NC"
+      ]
+    },
+    {
+      "id": "1804.09123",
+      "title": "PULP-HD: Accelerating Brain-Inspired High-Dimensional Computing on a Parallel Ultra-Low Power Platform",
+      "authors": [
+        "Fabio Montagna",
+        "Abbas Rahimi",
+        "Simone Benatti",
+        "Davide Rossi",
+        "Luca Benini"
+      ],
+      "date": "2018-04-24",
+      "updated": "2018-04-24",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/1804.09123",
+      "source": "arXiv",
+      "abstract": "Computing with high-dimensional (HD) vectors, also referred to as $\\textit{hypervectors}$, is a brain-inspired alternative to computing with scalars. Key properties of HD computing include a well-defined set of arithmetic operations on hypervectors, generality, scalability, robustness, fast learning, and ubiquitous parallel operations. HD computing is about manipulating and comparing large patterns-binary hypervectors with 10,000 dimensions-making its efficient realization on minimalistic ultra-low-power platforms challenging. This paper describes HD computing's acceleration and its optimization of memory accesses and operations on a silicon prototype of the PULPv3 4-core platform (1.5mm$^2$, 2mW), surpassing the state-of-the-art classification accuracy (on average 92.4%) with simultaneous 3.7$\\times$ end-to-end speed-up and 2$\\times$ energy saving compared to its single-core execution. We further explore the scalability of our accelerator by increasing the number of inputs and classification window on a new generation of the PULP architecture featuring bit-manipulation instruction extensions and larger number of 8 cores. These together enable a near ideal speed-up of 18.4$\\times$ compared to the single-core PULPv3.",
+      "categories": [
+        "eess.SP"
+      ]
+    },
+    {
+      "id": "1802.10237",
+      "title": "An EMG Gesture Recognition System with Flexible High-Density Sensors and Brain-Inspired High-Dimensional Classifier",
+      "authors": [
+        "Ali Moin",
+        "Andy Zhou",
+        "Abbas Rahimi",
+        "Simone Benatti",
+        "Alisha Menon",
+        "Senam Tamakloe",
+        "Jonathan Ting",
+        "Natasha Yamamoto",
+        "Yasser Khan",
+        "Fred Burghardt",
+        "Luca Benini",
+        "Ana C. Arias",
+        "Jan M. Rabaey"
+      ],
+      "date": "2018-02-28",
+      "updated": "2018-04-05",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/1802.10237",
+      "source": "arXiv",
+      "abstract": "EMG-based gesture recognition shows promise for human-machine interaction. Systems are often afflicted by signal and electrode variability which degrades performance over time. We present an end-to-end system combating this variability using a large-area, high-density sensor array and a robust classification algorithm. EMG electrodes are fabricated on a flexible substrate and interfaced to a custom wireless device for 64-channel signal acquisition and streaming. We use brain-inspired high-dimensional (HD) computing for processing EMG features in one-shot learning. The HD algorithm is tolerant to noise and electrode misplacement and can quickly learn from few gestures without gradient descent or back-propagation. We achieve an average classification accuracy of 96.64% for five gestures, with only 7% degradation when training and testing across different days. Our system maintains this accuracy when trained with only three trials of gestures; it also demonstrates comparable accuracy with the state-of-the-art when trained with one trial.",
+      "categories": [
+        "cs.HC",
+        "cs.LG",
+        "eess.SP"
+      ]
+    },
+    {
+      "id": "1712.01021",
+      "title": "An 826 MOPS, 210 uW/MHz Unum ALU in 65 nm",
+      "authors": [
+        "Florian Glaser",
+        "Stefan Mach",
+        "Abbas Rahimi",
+        "Frank K. Gürkaynak",
+        "Qiuting Huang",
+        "Luca Benini"
+      ],
+      "date": "2017-12-04",
+      "updated": "2017-12-05",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/1712.01021",
+      "source": "arXiv",
+      "abstract": "To overcome the limitations of conventional floating-point number formats, an interval arithmetic and variable-width storage format called universal number (unum) has been recently introduced. This paper presents the first (to the best of our knowledge) silicon implementation measurements of an application-specific integrated circuit (ASIC) for unum floating-point arithmetic. The designed chip includes a 128-bit wide unum arithmetic unit to execute additions and subtractions, while also supporting lossless (for intermediate results) and lossy (for external data movements) compression units to exploit the memory usage reduction potential of the unum format. Our chip, fabricated in a 65 nm CMOS process, achieves a maximum clock frequency of 413 MHz at 1.2 V with an average measured power of 210 uW/MHz.",
+      "categories": [
+        "cs.AR"
+      ]
+    },
+    {
+      "id": "1705.03934",
+      "title": "Autoscaling Bloom Filter: Controlling Trade-off Between True and False Positives",
+      "authors": [
+        "Denis Kleyko",
+        "Abbas Rahimi",
+        "Ross W. Gayler",
+        "Evgeny Osipov"
+      ],
+      "date": "2017-05-10",
+      "updated": "2017-12-27",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/1705.03934",
+      "source": "arXiv",
+      "abstract": "A Bloom filter is a simple data structure supporting membership queries on a set. The standard Bloom filter does not support the delete operation, therefore, many applications use a counting Bloom filter to enable deletion. This paper proposes a generalization of the counting Bloom filter approach, called \"autoscaling Bloom filters\", which allows adjustment of its capacity with probabilistic bounds on false positives and true positives. In essence, the autoscaling Bloom filter is a binarized counting Bloom filter with an adjustable binarization threshold. We present the mathematical analysis of the performance as well as give a procedure for minimization of the false positive rate.",
+      "categories": [
+        "cs.DS"
+      ]
+    }
+  ],
+  "urls": [
+    "https://export.arxiv.org/api/query?search_query=au%3A%22Abbas+Rahimi%22&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "truncated": false
+}

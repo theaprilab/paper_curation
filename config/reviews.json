@@ -1,0 +1,133 @@
+{
+  "krause:2510.27428": {
+    "summary": "불확실성을 이용해 탐색할 동작을 선택하고 소프트 로봇의 동역학 모델을 학습하는 SoftAE를 제안합니다. 시뮬레이션 3종과 실제 공압 소프트 암에서 모델 정확도와 새로운 작업으로의 전이를 평가합니다.",
+    "why_it_matters": "새로운 작업마다 소프트 로봇 데이터를 다시 모으는 비용이 크다면, 동역학 학습용 탐색 정책을 설계할 때 활용할 수 있습니다. SoftAE는 확률적 앙상블의 인식론적 불확실성으로 덜 관측된 상태·행동 영역을 찾아 탐색합니다. 작업별 시연에 맞춘 모델 대신 여러 작업에서 재사용할 동역학 모델을 만드는 접근입니다.",
+    "note_method": "assistant_abstract_summary",
+    "source_url": "https://arxiv.org/abs/2510.27428",
+    "noted_at": "2026-09-28",
+    "reading_note": {
+      "application": "새로운 작업마다 소프트 로봇 데이터를 다시 모으는 비용이 크다면, 동역학 학습용 탐색 정책을 설계할 때 활용할 수 있습니다. SoftAE는 확률적 앙상블의 인식론적 불확실성으로 덜 관측된 상태·행동 영역을 찾아 탐색합니다. 작업별 시연에 맞춘 모델 대신 여러 작업에서 재사용할 동역학 모델을 만드는 접근입니다.",
+      "validation_scope": "소프트 로봇 시뮬레이션 3종과 실제 공압 연속체 암에서 평가했습니다. 초록은 무작위 탐색·작업별 모델 기반 RL 대비 모델 정확도와 미관측 작업의 zero-shot 제어 개선을 보고하지만, 개선 수치나 실제 데이터 수집량은 제시하지 않습니다.",
+      "evidence": [
+        "SoftAE employs probabilistic ensemble models to estimate epistemic uncertainty and actively guides exploration toward underrepresented regions of the state-action space, achieving efficient coverage of diverse behaviors without task-specific supervision.",
+        "We evaluate SoftAE on three simulated soft robotic platforms -- a continuum arm, an articulated fish in fluid, and a musculoskeletal leg with hybrid actuation -- and on a pneumatically actuated continuum soft arm in the real world.",
+        "Compared with random exploration and task-specific model-based reinforcement learning, SoftAE produces more accurate dynamics models, enables superior zero-shot control on unseen tasks, and maintains robustness under sensing noise, actuation delays, and nonlinear material effects."
+      ],
+      "method": "assistant_abstract_analysis",
+      "source_url": "https://arxiv.org/abs/2510.27428"
+    }
+  },
+  "yue:2406.14699": {
+    "summary": "서로 충돌하는 여러 목적에 대한 사용자 선호를 학습하는 베이지안 최적화 방법 DSTS를 제안합니다. 외골격 개인화와 자율주행 정책 설계 시뮬레이션에서 평가합니다.",
+    "why_it_matters": "외골격 설정에서 편안함과 소비 에너지, 자율주행 정책에서 안전과 성능을 함께 조정할 때 활용할 수 있습니다. DSTS는 선호 기반 베이지안 최적화를 다목적으로 확장하므로, 여러 목적을 단일 점수로 표현하기 어렵고 설계안에 대한 선호를 얻을 수 있는 문제의 비교 방법으로 적합합니다.",
+    "note_method": "assistant_abstract_summary",
+    "source_url": "https://arxiv.org/abs/2406.14699",
+    "noted_at": "2026-09-28",
+    "reading_note": {
+      "application": "외골격 설정에서 편안함과 소비 에너지, 자율주행 정책에서 안전과 성능을 함께 조정할 때 활용할 수 있습니다. DSTS는 선호 기반 베이지안 최적화를 다목적으로 확장하므로, 여러 목적을 단일 점수로 표현하기 어렵고 설계안에 대한 선호를 얻을 수 있는 문제의 비교 방법으로 적합합니다.",
+      "validation_scope": "합성 함수 4개와 외골격 개인화·주행 정책 설계 시뮬레이션 2개에서 평가하고 점근적 일관성을 증명했습니다. 실제 착용자 실험이나 실차 검증은 초록에 보고되지 않습니다.",
+      "evidence": [
+        "To address this gap, we propose the first framework for PBO with multiple objectives.",
+        "Within this framework, we present dueling scalarized Thompson sampling (DSTS), a multi-objective generalization of the popular dueling Thompson algorithm, which may be of interest beyond the PBO setting.",
+        "We evaluate DSTS across four synthetic test functions and two simulated exoskeleton personalization and driving policy design tasks, showing that it outperforms several benchmarks.",
+        "Finally, we prove that DSTS is asymptotically consistent."
+      ],
+      "method": "assistant_abstract_analysis",
+      "source_url": "https://arxiv.org/abs/2406.14699"
+    }
+  },
+  "friston:2606.22813": {
+    "summary": "능동 추론을 바탕으로 물리적 AI의 정책을 테스트 시점에 갱신하는 방법을 제안합니다. 학습에서 보지 못한 상황에 대한 일반화를 자율주행 시뮬레이션으로 평가합니다.",
+    "why_it_matters": "학습 당시와 다른 상황에서 자율주행 정책의 적응을 연구한다면, 추론 시점에 정책을 갱신하는 비교 방법으로 활용할 수 있습니다. 세계 모델의 예상 예측 오차를 줄이는 방향으로 정책에 대한 믿음을 베이지안 갱신하고, 이를 자유 에너지 경계의 변분 추론으로 푸는 구조입니다.",
+    "note_method": "assistant_abstract_summary",
+    "source_url": "https://arxiv.org/abs/2606.22813",
+    "noted_at": "2026-09-28",
+    "reading_note": {
+      "application": "학습 당시와 다른 상황에서 자율주행 정책의 적응을 연구한다면, 추론 시점에 정책을 갱신하는 비교 방법으로 활용할 수 있습니다. 세계 모델의 예상 예측 오차를 줄이는 방향으로 정책에 대한 믿음을 베이지안 갱신하고, 이를 자유 에너지 경계의 변분 추론으로 푸는 구조입니다.",
+      "validation_scope": "자율주행 시뮬레이션에서 Q-learning 및 모델 기반 베이지안 RL보다 나은 일반화와 36% 초과 추론 효율 개선을 보고합니다. 효율 지표의 정의·측정 조건과 실제 차량 적용 가능성은 원문 확인이 필요합니다.",
+      "evidence": [
+        "Active inference achieves this by providing the reasoning to resolve prediction errors that arise when the agent encounters unforeseen situations outside its training distribution, enabling generalization in non-stationary environments.",
+        "The proposed scaling law captures this by dynamically updating the agent's policy with this reasoning at test time.",
+        "The resulting posterior policy admits a biological interpretation, recovering the scaling mechanism that engages the brain's basal ganglia and prefrontal cortex at test time.",
+        "Unlike existing scaling laws constrained by model size and training data, the derived solution scales with the continuous real-world experience of a physical AI agent."
+      ],
+      "method": "assistant_abstract_analysis",
+      "source_url": "https://arxiv.org/abs/2606.22813"
+    }
+  },
+  "murata:2512.01924": {
+    "summary": "시간 계층을 갖는 세계 모델과 추상 행동을 결합해 능동 추론의 행동 선택 비용을 줄입니다. 실제 로봇 물체 조작에서 목표 달성과 탐색 행동 사이의 전환을 평가합니다.",
+    "why_it_matters": "로봇 조작에서 불확실하면 탐색하고 충분히 알면 목표 동작을 하게 만들고 싶지만, 행동 시퀀스 탐색 비용이 부담되는 경우에 활용할 수 있습니다. 느린·빠른 시간척도의 세계 모델을 두고 행동 시퀀스를 벡터 양자화로 추상 행동으로 압축해, 추상 상태에서 행동을 선택하는 구조를 참고할 수 있습니다.",
+    "note_method": "assistant_abstract_summary",
+    "source_url": "https://arxiv.org/abs/2512.01924",
+    "noted_at": "2026-09-28",
+    "reading_note": {
+      "application": "로봇 조작에서 불확실하면 탐색하고 충분히 알면 목표 동작을 하게 만들고 싶지만, 행동 시퀀스 탐색 비용이 부담되는 경우에 활용할 수 있습니다. 느린·빠른 시간척도의 세계 모델을 두고 행동 시퀀스를 벡터 양자화로 추상 행동으로 압축해, 추상 상태에서 행동을 선택하는 구조를 참고할 수 있습니다.",
+      "validation_scope": "실제 로봇의 물체 조작에서 목표 지향·탐색 행동 전환과 높은 성공률을 보고합니다. 초록에는 성공률 숫자, 제어 주기, 계산 시간 수치가 없어 실시간 제어 예산에 맞는지는 원문에서 확인해야 합니다.",
+      "evidence": [
+        "The world model encodes environmental dynamics into hidden state representations at slow and fast timescales.",
+        "The action model compresses action sequences into abstract actions using vector quantization, and the abstract world model predicts future slow states conditioned on the abstract action, enabling low-cost action selection.",
+        "We evaluate the framework on object-manipulation tasks with a real-world robot.",
+        "Results show that it achieves high success rates across diverse manipulation tasks and switches between goal-directed and exploratory actions in uncertain settings, while making action selection computationally tractable."
+      ],
+      "method": "assistant_abstract_analysis",
+      "source_url": "https://arxiv.org/abs/2512.01924"
+    }
+  },
+  "lavalle:2504.18339": {
+    "summary": "센서 신호를 조절하는 에이전트가 다른 로봇의 위치 추정과 이동을 바꾸는 문제를 정식화합니다. 로봇이 목표에 도달했다고 믿지만 다른 위치에 도달하는 상황을 제어 이론으로 분석합니다.",
+    "why_it_matters": "위치 추정값이 왜곡될 때 내비게이션 정책이 어떻게 잘못된 목적지로 유도되는지 시험하는 시나리오 설계에 활용할 수 있습니다. 알려진 송신탑 3개의 신호 세기로 위치를 추정하는 수신 에이전트와 신호를 바꾸는 생성 에이전트를 분리해, 실제 위치와 로봇이 믿는 위치의 차이를 제어 문제로 다룹니다.",
+    "note_method": "assistant_abstract_summary",
+    "source_url": "https://arxiv.org/abs/2504.18339",
+    "noted_at": "2026-09-28",
+    "reading_note": {
+      "application": "위치 추정값이 왜곡될 때 내비게이션 정책이 어떻게 잘못된 목적지로 유도되는지 시험하는 시나리오 설계에 활용할 수 있습니다. 알려진 송신탑 3개의 신호 세기로 위치를 추정하는 수신 에이전트와 신호를 바꾸는 생성 에이전트를 분리해, 실제 위치와 로봇이 믿는 위치의 차이를 제어 문제로 다룹니다.",
+      "validation_scope": "초록은 평면 이동과 단순 정책을 전제로 한 수학적 정식화를 제시합니다. 실제 로봇 실험이나 일반적인 GPS·SLAM 시스템에서의 검증은 보고하지 않으므로, 센서 강건성 평가로의 활용은 이 모델을 바탕으로 한 확장 제안입니다.",
+      "evidence": [
+        "A receiver is moving on a plane localizing itself using the intensity of signals from three known towers observed at its position.",
+        "Based on this position estimate, it follows a simple policy to reach its goal.",
+        "The key idea is that a producer alters the signal intensities to alter the position estimate of the receiver while ensuring it reaches a different destination with the belief that it reached its goal.",
+        "We provide a precise mathematical formulation of this problem and show that it allows standard techniques from control theory to be applied to generate localization and navigation illusions that result in a desired receiver behavior."
+      ],
+      "method": "assistant_abstract_analysis",
+      "source_url": "https://arxiv.org/abs/2504.18339"
+    }
+  },
+  "kaelbling:2505.02216": {
+    "summary": "LLM이 생성한 확률 프로그램을 관측 데이터로 검증·수정해 POMDP 모델을 학습합니다. 장난감 문제, MiniGrid, 실제 이동 로봇 탐색 두 영역에서 평가합니다.",
+    "why_it_matters": "부분 관측 로봇 탐색에서 POMDP를 쓰고 싶지만 관측·전이·보상 모델을 직접 정하기 어렵다면 활용할 수 있습니다. LLM이 짧은 확률 프로그램 형태로 모델 후보를 만들고, 실제 관측의 경험 분포와 대조해 피드백으로 수정하는 절차입니다. 로봇 행동을 LLM에 바로 맡기기보다 계획에 필요한 모델을 얻는 방식입니다.",
+    "note_method": "assistant_abstract_summary",
+    "source_url": "https://arxiv.org/abs/2505.02216",
+    "noted_at": "2026-09-28",
+    "reading_note": {
+      "application": "부분 관측 로봇 탐색에서 POMDP를 쓰고 싶지만 관측·전이·보상 모델을 직접 정하기 어렵다면 활용할 수 있습니다. LLM이 짧은 확률 프로그램 형태로 모델 후보를 만들고, 실제 관측의 경험 분포와 대조해 피드백으로 수정하는 절차입니다. 로봇 행동을 LLM에 바로 맡기기보다 계획에 필요한 모델을 얻는 방식입니다.",
+      "validation_scope": "고전 POMDP 문제, MiniGrid, 실제 이동 로봇 탐색 2개 영역에서 평가했습니다. 단순한 확률 프로그램으로 표현할 수 있는 모델 하위 집합이 대상이므로, 복잡한 센서 관측·접촉 동역학으로의 확장은 별도 검증이 필요합니다.",
+      "evidence": [
+        "In particular, we are interested in a subclass of POMDPs wherein the components of the model, including the observation function, reward function, transition function, and initial state distribution function, can be modeled as low-complexity probabilistic graphical models in the form of a short probabilistic program.",
+        "Our strategy to learn these programs uses an LLM as a prior, generating candidate probabilistic programs that are then tested against the empirical distribution and adjusted through feedback.",
+        "We experiment on a number of classical toy POMDP problems, simulated MiniGrid domains, and two real mobile-base robotics search domains involving partial observability.",
+        "Our results show that using an LLM to guide in the construction of a low-complexity POMDP model can be more effective than tabular POMDP learning, behavior cloning, or direct LLM planning."
+      ],
+      "method": "assistant_abstract_analysis",
+      "source_url": "https://arxiv.org/abs/2505.02216"
+    }
+  },
+  "neubert:2403.10283": {
+    "summary": "지역 위치 그래프와 주의 기반 지역 특징을 결합한 장소 인식 파이프라인입니다. HDC로 같은 지역 특징을 전역 기술자로 구성해 후보 검색과 재순위화에 활용합니다.",
+    "why_it_matters": "대규모 장소 인식에서 특징 비교 시간과 지도 기술자 저장 공간이 병목이라면 활용할 수 있습니다. 지역 특징을 HDC 전역 기술자로도 묶어 빠른 후보 검색과 재순위화에 재사용하고, 학습 없이 공간 관계를 표현하는 LPG와 주의 기반 ATLAS 특징을 결합하는 파이프라인입니다.",
+    "note_method": "assistant_abstract_summary",
+    "source_url": "https://arxiv.org/abs/2403.10283",
+    "noted_at": "2026-09-28",
+    "reading_note": {
+      "application": "대규모 장소 인식에서 특징 비교 시간과 지도 기술자 저장 공간이 병목이라면 활용할 수 있습니다. 지역 특징을 HDC 전역 기술자로도 묶어 빠른 후보 검색과 재순위화에 재사용하고, 학습 없이 공간 관계를 표현하는 LPG와 주의 기반 ATLAS 특징을 결합하는 파이프라인입니다.",
+      "validation_scope": "표준 장소 인식 데이터셋에서 Patch-NetVLAD 대비 정확도 15% 개선, 특징 비교 54배 속도, 기술자 저장 점유 55배 감소를 보고합니다. 이는 결합된 전체 파이프라인 결과이며 HDC 단독 효과나 전체 로봇 처리 속도로 해석하면 안 됩니다. 정확도 15%의 계산 방식은 원문 확인이 필요합니다.",
+      "evidence": [
+        "There are three main contributions: First, we propose Local Positional Graphs (LPG), a training-free and runtime-efficient approach to encode spatial context information of local image features.",
+        "Third, we present a hierarchical pipeline that exploits hyperdimensional computing to use the same local features as holistic HDC-descriptors for fast candidate selection and for candidate reranking.",
+        "We combine all contributions in a runtime and data-efficient VPR pipeline that shows benefits over the state-of-the-art method Patch-NetVLAD on a large collection of standard place recognition datasets with 15$\\%$ better performance in VPR accuracy, 54$\\times$ faster feature comparison speed, and 55$\\times$ less descriptor storage occupancy, making our method promising for real-world high-performance large-scale VPR in changing environments."
+      ],
+      "method": "assistant_abstract_analysis",
+      "source_url": "https://arxiv.org/abs/2403.10283"
+    }
+  }
+}

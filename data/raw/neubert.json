@@ -1,0 +1,344 @@
+{
+  "fetched_at": "2026-09-28T11:58:19.177577+00:00",
+  "total": 17,
+  "papers": [
+    {
+      "id": "2604.26478",
+      "title": "Cross-Domain Transfer of Hyperspectral Foundation Models",
+      "authors": [
+        "Nick Theisen",
+        "Peer Neubert"
+      ],
+      "date": "2026-04-29",
+      "updated": "2026-04-29",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2604.26478",
+      "source": "arXiv",
+      "abstract": "Hyperspectral imaging (HSI) semantic segmentation typically relies on in-domain training, but limited data availability often restricts model performance in real-world applications. Current approaches to leverage foundation models in proximal sensing use cross-modality techniques, bridging RGB and HSI to exploit vision foundation models. However, these methods either discard spectral information or introduce architectural complexity. We propose cross-domain transfer as an alternative, reusing HSI foundation models - originally trained in remote sensing - for proximal sensing applications. By eliminating the need to bridge modality gaps, our approach preserves spectral information while maintaining a simple architecture. Using the HS3-Bench benchmark, we systematically evaluate and compare conventional in-domain, in-modality training, cross-modality transfer and cross-domain transfer strategies. Our results demonstrate that cross-domain transfer achieves large performance improvements over in-domain, in-modality training, reduces the performance gap to cross-modality approaches and maintains strong performance in limited data settings. Thus, this work advances more effective HSI semantic segmentation in diverse applications.",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "2509.13809",
+      "title": "Data-Efficient Spectral Classification of Hyperspectral Data Using MiniROCKET and HDC-MiniROCKET",
+      "authors": [
+        "Nick Theisen",
+        "Kenny Schlegel",
+        "Dietrich Paulus",
+        "Peer Neubert"
+      ],
+      "date": "2025-09-17",
+      "updated": "2025-09-17",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2509.13809",
+      "source": "arXiv",
+      "abstract": "The classification of pixel spectra of hyperspectral images, i.e. spectral classification, is used in many fields ranging from agricultural, over medical to remote sensing applications and is currently also expanding to areas such as autonomous driving. Even though for full hyperspectral images the best-performing methods exploit spatial-spectral information, performing classification solely on spectral information has its own advantages, e.g. smaller model size and thus less data required for training. Moreover, spectral information is complementary to spatial information and improvements on either part can be used to improve spatial-spectral approaches in the future. Recently, 1D-Justo-LiuNet was proposed as a particularly efficient model with very few parameters, which currently defines the state of the art in spectral classification. However, we show that with limited training data the model performance deteriorates. Therefore, we investigate MiniROCKET and HDC-MiniROCKET for spectral classification to mitigate that problem. The model extracts well-engineered features without trainable parameters in the feature extraction part and is therefore less vulnerable to limited training data. We show that even though MiniROCKET has more parameters it outperforms 1D-Justo-LiuNet in limited data scenarios and is mostly on par with it in the general case",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "2508.01715",
+      "title": "Towards Zero-Shot Terrain Traversability Estimation: Challenges and Opportunities",
+      "authors": [
+        "Ida Germann",
+        "Mark O. Mints",
+        "Peer Neubert"
+      ],
+      "date": "2025-08-03",
+      "updated": "2025-08-03",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2508.01715",
+      "source": "arXiv",
+      "abstract": "Terrain traversability estimation is crucial for autonomous robots, especially in unstructured environments where visual cues and reasoning play a key role. While vision-language models (VLMs) offer potential for zero-shot estimation, the problem remains inherently ill-posed. To explore this, we introduce a small dataset of human-annotated water traversability ratings, revealing that while estimations are subjective, human raters still show some consensus. Additionally, we propose a simple pipeline that integrates VLMs for zero-shot traversability estimation. Our experiments reveal mixed results, suggesting that current foundation models are not yet suitable for practical deployment but provide valuable insights for further research.",
+      "categories": [
+        "cs.RO"
+      ]
+    },
+    {
+      "id": "2409.11205",
+      "title": "HS3-Bench: A Benchmark and Strong Baseline for Hyperspectral Semantic Segmentation in Driving Scenarios",
+      "authors": [
+        "Nick Theisen",
+        "Robin Bartsch",
+        "Dietrich Paulus",
+        "Peer Neubert"
+      ],
+      "date": "2024-09-17",
+      "updated": "2024-09-17",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2409.11205",
+      "source": "arXiv",
+      "abstract": "Semantic segmentation is an essential step for many vision applications in order to understand a scene and the objects within. Recent progress in hyperspectral imaging technology enables the application in driving scenarios and the hope is that the devices perceptive abilities provide an advantage over RGB-cameras. Even though some datasets exist, there is no standard benchmark available to systematically measure progress on this task and evaluate the benefit of hyperspectral data. In this paper, we work towards closing this gap by providing the HyperSpectral Semantic Segmentation benchmark (HS3-Bench). It combines annotated hyperspectral images from three driving scenario datasets and provides standardized metrics, implementations, and evaluation protocols. We use the benchmark to derive two strong baseline models that surpass the previous state-of-the-art performances with and without pre-training on the individual datasets. Further, our results indicate that the existing learning-based methods benefit more from leveraging additional RGB training data than from leveraging the additional hyperspectral channels. This poses important questions for future research on hyperspectral imaging for semantic segmentation in driving scenarios. Code to run the benchmark and the strong baseline approaches are available under https://github.com/nickstheisen/hyperseg.",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "2407.12408",
+      "title": "Towards Revisiting Visual Place Recognition for Joining Submaps in Multimap SLAM",
+      "authors": [
+        "Markus Weißflog",
+        "Stefan Schubert",
+        "Peter Protzel",
+        "Peer Neubert"
+      ],
+      "date": "2024-07-17",
+      "updated": "2025-01-08",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2407.12408",
+      "source": "arXiv",
+      "abstract": "Visual SLAM is a key technology for many autonomous systems. However, tracking loss can lead to the creation of disjoint submaps in multimap SLAM systems like ORB-SLAM3. Because of that, these systems employ submap merging strategies. As we show, these strategies are not always successful. In this paper, we investigate the impact of using modern VPR approaches for submap merging in visual SLAM. We argue that classical evaluation metrics are not sufficient to estimate the impact of a modern VPR component on the overall system. We show that naively replacing the VPR component does not leverage its full potential without requiring substantial interference in the original system. Because of that, we present a post-processing pipeline along with a set of metrics that allow us to estimate the impact of modern VPR components. We evaluate our approach on the NCLT and Newer College datasets using ORB-SLAM3 with NetVLAD and HDC-DELF as VPR components. Additionally, we present a simple approach for combining VPR with temporal consistency for map merging. We show that the map merging performance of ORB-SLAM3 can be improved. Building on these results, researchers in VPR can assess the potential of their approaches for SLAM systems.",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "2407.12375",
+      "title": "FETCH: A Memory-Efficient Replay Approach for Continual Learning in Image Classification",
+      "authors": [
+        "Markus Weißflog",
+        "Peter Protzel",
+        "Peer Neubert"
+      ],
+      "date": "2024-07-17",
+      "updated": "2024-07-17",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2407.12375",
+      "source": "arXiv",
+      "abstract": "Class-incremental continual learning is an important area of research, as static deep learning methods fail to adapt to changing tasks and data distributions. In previous works, promising results were achieved using replay and compressed replay techniques. In the field of regular replay, GDumb achieved outstanding results but requires a large amount of memory. This problem can be addressed by compressed replay techniques. The goal of this work is to evaluate compressed replay in the pipeline of GDumb. We propose FETCH, a two-stage compression approach. First, the samples from the continual datastream are encoded by the early layers of a pre-trained neural network. Second, the samples are compressed before being stored in the episodic memory. Following GDumb, the remaining classification head is trained from scratch using only the decompressed samples from the reply memory. We evaluate FETCH in different scenarios and show that this approach can increase accuracy on CIFAR10 and CIFAR100. In our experiments, simple compression methods (e.g., quantization of tensors) outperform deep autoencoders. In the future, FETCH could serve as a baseline for benchmarking compressed replay learning in constrained memory scenarios.",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "2403.10283",
+      "title": "Local positional graphs and attentive local features for a data and runtime-efficient hierarchical place recognition pipeline",
+      "authors": [
+        "Fangming Yuan",
+        "Stefan Schubert",
+        "Peter Protzel",
+        "Peer Neubert"
+      ],
+      "date": "2024-03-15",
+      "updated": "2024-03-15",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2403.10283",
+      "source": "arXiv",
+      "abstract": "Large-scale applications of Visual Place Recognition (VPR) require computationally efficient approaches. Further, a well-balanced combination of data-based and training-free approaches can decrease the required amount of training data and effort and can reduce the influence of distribution shifts between the training and application phases. This paper proposes a runtime and data-efficient hierarchical VPR pipeline that extends existing approaches and presents novel ideas. There are three main contributions: First, we propose Local Positional Graphs (LPG), a training-free and runtime-efficient approach to encode spatial context information of local image features. LPG can be combined with existing local feature detectors and descriptors and considerably improves the image-matching quality compared to existing techniques in our experiments. Second, we present Attentive Local SPED (ATLAS), an extension of our previous local features approach with an attention module that improves the feature quality while maintaining high data efficiency. The influence of the proposed modifications is evaluated in an extensive ablation study. Third, we present a hierarchical pipeline that exploits hyperdimensional computing to use the same local features as holistic HDC-descriptors for fast candidate selection and for candidate reranking. We combine all contributions in a runtime and data-efficient VPR pipeline that shows benefits over the state-of-the-art method Patch-NetVLAD on a large collection of standard place recognition datasets with 15$\\%$ better performance in VPR accuracy, 54$\\times$ faster feature comparison speed, and 55$\\times$ less descriptor storage occupancy, making our method promising for real-world high-performance large-scale VPR in changing environments. Code will be made available with publication of this paper.",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "2310.07434",
+      "title": "HealthWalk: Promoting Health and Mobility through Sensor-Based Rollator Walker Assistance",
+      "authors": [
+        "Ivanna Kramer",
+        "Kevin Weirauch",
+        "Sabine Bauer",
+        "Mark Oliver Mints",
+        "Peer Neubert"
+      ],
+      "date": "2023-10-11",
+      "updated": "2023-10-11",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2310.07434",
+      "source": "arXiv",
+      "abstract": "Rollator walkers allow people with physical limitations to increase their mobility and give them the confidence and independence to participate in society for longer. However, rollator walker users often have poor posture, leading to further health problems and, in the worst case, falls. Integrating sensors into rollator walker designs can help to address this problem and results in a platform that allows several other interesting use cases. This paper briefly overviews existing systems and the current research directions and challenges in this field. We also present our early HealthWalk rollator walker prototype for data collection with older people, rheumatism, multiple sclerosis and Parkinson patients, and individuals with visual impairments.",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.HC",
+        "cs.LG"
+      ]
+    },
+    {
+      "id": "2303.03281",
+      "title": "Visual Place Recognition: A Tutorial",
+      "authors": [
+        "Stefan Schubert",
+        "Peer Neubert",
+        "Sourav Garg",
+        "Michael Milford",
+        "Tobias Fischer"
+      ],
+      "date": "2023-03-06",
+      "updated": "2023-08-09",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2303.03281",
+      "source": "arXiv",
+      "abstract": "Localization is an essential capability for mobile robots. A rapidly growing field of research in this area is Visual Place Recognition (VPR), which is the ability to recognize previously seen places in the world based solely on images. This present work is the first tutorial paper on visual place recognition. It unifies the terminology of VPR and complements prior research in two important directions: 1) It provides a systematic introduction for newcomers to the field, covering topics such as the formulation of the VPR problem, a general-purpose algorithmic pipeline, an evaluation methodology for VPR approaches, and the major challenges for VPR and how they may be addressed. 2) As a contribution for researchers acquainted with the VPR problem, it examines the intricacies of different VPR problem types regarding input, data processing, and output. The tutorial also discusses the subtleties behind the evaluation of VPR algorithms, e.g., the evaluation of a VPR system that has to find all matching database images per query, as opposed to just a single match. Practical code examples in Python illustrate to prospective practitioners and researchers how VPR is implemented and evaluated.",
+      "categories": [
+        "cs.CV"
+      ]
+    },
+    {
+      "id": "2202.08055",
+      "title": "HDC-MiniROCKET: Explicit Time Encoding in Time Series Classification with Hyperdimensional Computing",
+      "authors": [
+        "Kenny Schlegel",
+        "Peer Neubert",
+        "Peter Protzel"
+      ],
+      "date": "2022-02-16",
+      "updated": "2022-02-16",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2202.08055",
+      "source": "arXiv",
+      "abstract": "Classification of time series data is an important task for many application domains. One of the best existing methods for this task, in terms of accuracy and computation time, is MiniROCKET. In this work, we extend this approach to provide better global temporal encodings using hyperdimensional computing (HDC) mechanisms. HDC (also known as Vector Symbolic Architectures, VSA) is a general method to explicitly represent and process information in high-dimensional vectors. It has previously been used successfully in combination with deep neural networks and other signal processing algorithms. We argue that the internal high-dimensional representation of MiniROCKET is well suited to be complemented by the algebra of HDC. This leads to a more general formulation, HDC-MiniROCKET, where the original algorithm is only a special case. We will discuss and demonstrate that HDC-MiniROCKET can systematically overcome catastrophic failures of MiniROCKET on simple synthetic datasets. These results are confirmed by experiments on the 128 datasets from the UCR time series classification benchmark. The extension with HDC can achieve considerably better results on datasets with high temporal dependence without increasing the computational effort for inference.",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "2106.12671",
+      "title": "What makes visual place recognition easy or hard?",
+      "authors": [
+        "Stefan Schubert",
+        "Peer Neubert"
+      ],
+      "date": "2021-06-23",
+      "updated": "2021-06-23",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2106.12671",
+      "source": "arXiv",
+      "abstract": "Visual place recognition is a fundamental capability for the localization of mobile robots. It places image retrieval in the practical context of physical agents operating in a physical world. It is an active field of research and many different approaches have been proposed and evaluated in many different experiments. In the following, we argue that due to variations of this practical context and individual design decisions, place recognition experiments are barely comparable across different papers and that there is a variety of properties that can change from one experiment to another. We provide an extensive list of such properties and give examples how they can be used to setup a place recognition experiment easier or harder. This might be interesting for different involved parties: (1) people who just want to select a place recognition approach that is suitable for the properties of their particular task at hand, (2) researchers that look for open research questions and are interested in particularly difficult instances, (3) authors that want to create reproducible papers on this topic, and (4) also reviewers that have the task to identify potential problems in papers under review.",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ]
+    },
+    {
+      "id": "2103.08366",
+      "title": "Beyond ANN: Exploiting Structural Knowledge for Efficient Place Recognition",
+      "authors": [
+        "Stefan Schubert",
+        "Peer Neubert",
+        "Peter Protzel"
+      ],
+      "date": "2021-03-15",
+      "updated": "2021-03-15",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2103.08366",
+      "source": "arXiv",
+      "abstract": "Visual place recognition is the task of recognizing same places of query images in a set of database images, despite potential condition changes due to time of day, weather or seasons. It is important for loop closure detection in SLAM and candidate selection for global localization. Many approaches in the literature perform computationally inefficient full image comparisons between queries and all database images. There is still a lack of suited methods for efficient place recognition that allow a fast, sparse comparison of only the most promising image pairs without any loss in performance. While this is partially given by ANN-based methods, they trade speed for precision and additional memory consumption, and many cannot find arbitrary numbers of matching database images in case of loops in the database. In this paper, we propose a novel fast sequence-based method for efficient place recognition that can be applied online. It uses relocalization to recover from sequence losses, and exploits usually available but often unused intra-database similarities for a potential detection of all matching database images for each query in case of loops or stops in the database. We performed extensive experimental evaluations over five datasets and 21 sequence combinations, and show that our method outperforms two state-of-the-art approaches and even full image comparisons in many cases, while providing a good tradeoff between performance and percentage of evaluated image pairs. Source code for Matlab will be provided with publication of this paper.",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ]
+    },
+    {
+      "id": "2101.07720",
+      "title": "Hyperdimensional computing as a framework for systematic aggregation of image descriptors",
+      "authors": [
+        "Peer Neubert",
+        "Stefan Schubert"
+      ],
+      "date": "2021-01-19",
+      "updated": "2021-01-19",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2101.07720",
+      "source": "arXiv",
+      "abstract": "Image and video descriptors are an omnipresent tool in computer vision and its application fields like mobile robotics. Many hand-crafted and in particular learned image descriptors are numerical vectors with a potentially (very) large number of dimensions. Practical considerations like memory consumption or time for comparisons call for the creation of compact representations. In this paper, we use hyperdimensional computing (HDC) as an approach to systematically combine information from a set of vectors in a single vector of the same dimensionality. HDC is a known technique to perform symbolic processing with distributed representation in numerical vectors with thousands of dimensions. We present a HDC implementation that is suitable for processing the output of existing and future (deep-learning based) image descriptors. We discuss how this can be used as a framework to process descriptors together with additional knowledge by simple and fast vector operations. A concrete outcome is a novel HDC-based approach to aggregate a set of local image descriptors together with their image positions in a single holistic descriptor. The comparison to available holistic descriptors and aggregation methods on a series of standard mobile robotics place recognition experiments shows a 20% improvement in average performance compared to runner-up and 3.6x better worst-case performance.",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ]
+    },
+    {
+      "id": "2012.14766",
+      "title": "Graph-based non-linear least squares optimization for visual place recognition in changing environments",
+      "authors": [
+        "Stefan Schubert",
+        "Peer Neubert",
+        "Peter Protzel"
+      ],
+      "date": "2020-12-29",
+      "updated": "2020-12-29",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2012.14766",
+      "source": "arXiv",
+      "abstract": "Visual place recognition is an important subproblem of mobile robot localization. Since it is a special case of image retrieval, the basic source of information is the pairwise similarity of image descriptors. However, the embedding of the image retrieval problem in this robotic task provides additional structure that can be exploited, e.g. spatio-temporal consistency. Several algorithms exist to exploit this structure, e.g., sequence processing approaches or descriptor standardization approaches for changing environments. In this paper, we propose a graph-based framework to systematically exploit different types of additional structure and information. The graphical model is used to formulate a non-linear least squares problem that can be optimized with standard tools. Beyond sequences and standardization, we propose the usage of intra-set similarities within the database and/or the query image set as additional source of information. If available, our approach also allows to seamlessly integrate additional knowledge about poses of database images. We evaluate the system on a variety of standard place recognition datasets and demonstrate performance improvements for a large number of different configurations including different sources of information, different types of constraints, and online or offline place recognition setups.",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ]
+    },
+    {
+      "id": "2001.11797",
+      "title": "A comparison of Vector Symbolic Architectures",
+      "authors": [
+        "Kenny Schlegel",
+        "Peer Neubert",
+        "Peter Protzel"
+      ],
+      "date": "2020-01-31",
+      "updated": "2021-12-16",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2001.11797",
+      "source": "arXiv",
+      "abstract": "Vector Symbolic Architectures combine a high-dimensional vector space with a set of carefully designed operators in order to perform symbolic computations with large numerical vectors. Major goals are the exploitation of their representational power and ability to deal with fuzziness and ambiguity. Over the past years, several VSA implementations have been proposed. The available implementations differ in the underlying vector space and the particular implementations of the VSA operators. This paper provides an overview of eleven available VSA implementations and discusses their commonalities and differences in the underlying vector space and operators. We create a taxonomy of available binding operations and show an important ramification for non self-inverse binding operations using an example from analogical reasoning. A main contribution is the experimental comparison of the available implementations in order to evaluate (1) the capacity of bundles, (2) the approximation quality of non-exact unbinding operations, (3) the influence of combining binding and bundling operations on the query answering performance, and (4) the performance on two example applications: visual place- and language-recognition. We expect this comparison and systematization to be relevant for development of VSAs, and to support the selection of an appropriate VSA for a particular task. The implementations are available.",
+      "categories": [
+        "cs.AI"
+      ]
+    },
+    {
+      "id": "2001.08960",
+      "title": "Unsupervised Learning Methods for Visual Place Recognition in Discretely and Continuously Changing Environments",
+      "authors": [
+        "Stefan Schubert",
+        "Peer Neubert",
+        "Peter Protzel"
+      ],
+      "date": "2020-01-24",
+      "updated": "2020-01-24",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/2001.08960",
+      "source": "arXiv",
+      "abstract": "Visual place recognition in changing environments is the problem of finding matchings between two sets of observations, a query set and a reference set, despite severe appearance changes. Recently, image comparison using CNN-based descriptors showed very promising results. However, existing experiments from the literature typically assume a single distinctive condition within each set (e.g., reference: day, query: night). We demonstrate that as soon as the conditions change within one set (e.g., reference: day, query: traversal daytime-dusk-night-dawn), different places under the same condition can suddenly look more similar than same places under different conditions and state-of-the-art approaches like CNN-based descriptors fail. This paper discusses this practically very important problem of in-sequence condition changes and defines a hierarchy of problem setups from (1) no in-sequence changes, (2) discrete in-sequence changes, to (3) continuous in-sequence changes. We will experimentally evaluate the effect of these changes on two state-of-the-art CNN-descriptors. Our experiments emphasize the importance of statistical standardization of descriptors and shows its limitations in case of continuous changes. To address this practically most relevant setup, we investigate and experimentally evaluate the application of unsupervised learning methods using two available PCA-based approaches and propose a novel clustering-based extension of the statistical normalization.",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ]
+    },
+    {
+      "id": "1402.3213",
+      "title": "Proceedings of the 1st Workshop on Robotics Challenges and Vision (RCV2013)",
+      "authors": [
+        "Aitor Aladren",
+        "Sasa Bodiroza",
+        "Hamidreza Chitsaz",
+        "J. J. Guerrero",
+        "Verena Hafner",
+        "Kris Hauser",
+        "Aleksandar Jevtic",
+        "Moslem Kazemi",
+        "Bruno Lara",
+        "Gonzalo Lopez-Nicolas",
+        "Peer Neubert",
+        "Peter Protzel",
+        "Laurel D. Riek",
+        "Niko Sunderhauf",
+        "Chee Yap"
+      ],
+      "date": "2014-02-13",
+      "updated": "2014-02-13",
+      "date_type": "arxiv_first_submission",
+      "link": "https://arxiv.org/abs/1402.3213",
+      "source": "arXiv",
+      "abstract": "Proceedings of the 1st Workshop on Robotics Challenges and Vision (RCV2013)",
+      "categories": [
+        "cs.RO"
+      ]
+    }
+  ],
+  "urls": [
+    "https://export.arxiv.org/api/query?search_query=au%3A%22Peer+Neubert%22&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "truncated": false
+}

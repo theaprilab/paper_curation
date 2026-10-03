@@ -1,0 +1,105 @@
+[
+  {
+    "id": "krause",
+    "topic": "Active Learning",
+    "guru": "Andreas Krause",
+    "group": "ETH Zürich · LAS",
+    "guru_type": "main",
+    "aliases": [
+      "Andreas Krause"
+    ],
+    "publication_url": "https://las.inf.ethz.ch/publications",
+    "members": []
+  },
+  {
+    "id": "yue",
+    "topic": "Active Learning",
+    "guru": "Yisong Yue",
+    "group": "Caltech",
+    "guru_type": "applied",
+    "aliases": [
+      "Yisong Yue"
+    ],
+    "publication_url": "https://www.yisongyue.com/research",
+    "members": []
+  },
+  {
+    "id": "friston",
+    "topic": "Active Inference",
+    "guru": "Karl Friston",
+    "group": "UCL",
+    "guru_type": "main",
+    "aliases": [
+      "Karl Friston",
+      "Karl J. Friston"
+    ],
+    "publication_url": "https://www.fil.ion.ucl.ac.uk/~karl/",
+    "members": []
+  },
+  {
+    "id": "murata",
+    "topic": "Active Inference",
+    "guru": "Shingo Murata",
+    "group": "Keio · Murata Lab",
+    "guru_type": "applied",
+    "aliases": [
+      "Shingo Murata"
+    ],
+    "publication_url": "https://murata-lab.jp/publications/?lang=en",
+    "members": []
+  },
+  {
+    "id": "lavalle",
+    "topic": "Information Space",
+    "guru": "Steven M. LaValle",
+    "group": "University of Oulu · Perception Engineering",
+    "guru_type": "main",
+    "aliases": [
+      "Steven M. LaValle",
+      "Steven LaValle",
+      "Steven M LaValle"
+    ],
+    "publication_url": "https://www.lavalle.pl/ispace.html",
+    "members": []
+  },
+  {
+    "id": "kaelbling",
+    "topic": "Information Space",
+    "guru": "Leslie P. Kaelbling",
+    "group": "MIT · LIS",
+    "guru_type": "applied",
+    "aliases": [
+      "Leslie Pack Kaelbling",
+      "Leslie P. Kaelbling",
+      "Leslie Kaelbling"
+    ],
+    "publication_url": "https://lis.csail.mit.edu/research/",
+    "members": []
+  },
+  {
+    "id": "rahimi",
+    "topic": "Hyperdimensional Computing",
+    "guru": "Abbas Rahimi",
+    "group": "IBM Research Zürich",
+    "guru_type": "main",
+    "aliases": [
+      "Abbas Rahimi"
+    ],
+    "publication_url": "https://research.ibm.com/people/abbas-rahimi",
+    "members": []
+  },
+  {
+    "id": "neubert",
+    "topic": "Hyperdimensional Computing",
+    "guru": "Peer Neubert",
+    "group": "University of Koblenz · INTAS",
+    "guru_type": "applied",
+    "aliases": [
+      "Peer Neubert"
+    ],
+    "publication_url": "https://www.uni-koblenz.de/de/informatik/icv/neubert",
+    "members": [],
+    "previous_group": "TU Chemnitz",
+    "affiliation_checked_at": "2026-09-28"
+  }
+]
