@@ -65,12 +65,12 @@
           "source_url": "https://arxiv.org/abs/2406.14699"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-10-05T02:01:09.017889+00:00",
+        "verified_at": "2026-10-12T02:24:08.934627+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
       "publication_url": "https://www.yisongyue.com/research",
       "first_selected_at": "2026-09-28T12:05:46.123305+00:00",
-      "last_selected_at": "2026-10-05T02:01:37.714650+00:00",
+      "last_selected_at": "2026-10-12T02:24:34.510433+00:00",
       "archived_at": null
     },
     {
@@ -128,12 +128,12 @@
           "source_url": "https://arxiv.org/abs/2403.10283"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-10-05T02:01:37.687803+00:00",
+        "verified_at": "2026-10-12T02:24:34.493297+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
       "publication_url": "https://www.uni-koblenz.de/de/informatik/icv/neubert",
       "first_selected_at": "2026-09-28T12:05:46.123305+00:00",
-      "last_selected_at": "2026-10-05T02:01:37.714650+00:00",
+      "last_selected_at": "2026-10-12T02:24:34.510433+00:00",
       "archived_at": null
     },
     {
@@ -195,12 +195,12 @@
           "source_url": "https://arxiv.org/abs/2512.01924"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-10-05T02:01:18.251424+00:00",
+        "verified_at": "2026-10-12T02:24:18.415287+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
       "publication_url": "https://murata-lab.jp/publications/?lang=en",
       "first_selected_at": "2026-09-28T12:05:46.123305+00:00",
-      "last_selected_at": "2026-10-05T02:01:37.714650+00:00",
+      "last_selected_at": "2026-10-12T02:24:34.510433+00:00",
       "archived_at": null
     },
     {
@@ -258,12 +258,12 @@
           "source_url": "https://arxiv.org/abs/2504.18339"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-10-05T02:01:21.263169+00:00",
+        "verified_at": "2026-10-12T02:24:21.849569+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
       "publication_url": "https://www.lavalle.pl/ispace.html",
       "first_selected_at": "2026-09-28T12:05:46.123305+00:00",
-      "last_selected_at": "2026-10-05T02:01:37.714650+00:00",
+      "last_selected_at": "2026-10-12T02:24:34.510433+00:00",
       "archived_at": null
     },
     {
@@ -327,12 +327,12 @@
           "source_url": "https://arxiv.org/abs/2510.27428"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-10-05T02:01:03.079909+00:00",
+        "verified_at": "2026-10-12T02:24:02.608022+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
       "publication_url": "https://las.inf.ethz.ch/publications",
       "first_selected_at": "2026-09-28T12:05:46.123305+00:00",
-      "last_selected_at": "2026-10-05T02:01:37.714650+00:00",
+      "last_selected_at": "2026-10-12T02:24:34.510433+00:00",
       "archived_at": null
     },
     {
@@ -395,12 +395,12 @@
           "source_url": "https://arxiv.org/abs/2505.02216"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-10-05T02:01:29.285465+00:00",
+        "verified_at": "2026-10-12T02:24:28.080872+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
       "publication_url": "https://lis.csail.mit.edu/research/",
       "first_selected_at": "2026-09-28T12:05:46.123305+00:00",
-      "last_selected_at": "2026-10-05T02:01:37.714650+00:00",
+      "last_selected_at": "2026-10-12T02:24:34.510433+00:00",
       "archived_at": null
     },
     {
@@ -461,16 +461,16 @@
           "source_url": "https://arxiv.org/abs/2606.22813"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-10-05T02:01:15.158125+00:00",
+        "verified_at": "2026-10-12T02:24:15.226000+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
       "publication_url": "https://www.fil.ion.ucl.ac.uk/~karl/",
       "first_selected_at": "2026-09-28T12:05:46.123305+00:00",
-      "last_selected_at": "2026-10-05T02:01:37.714650+00:00",
+      "last_selected_at": "2026-10-12T02:24:34.510433+00:00",
       "archived_at": null
     }
   ],
-  "generated_at": "2026-10-05T02:01:37.714650+00:00",
+  "generated_at": "2026-10-12T02:24:34.510433+00:00",
   "mode": "live",
   "latest_scope": "검색한 arXiv 저자 논문 범위 내 최신 적합 후보. 전체 출판물의 최신성을 보장하지 않습니다.",
   "slots": [
@@ -544,14 +544,14 @@
           "source_url": "https://arxiv.org/abs/2510.27428"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-10-05T02:01:03.079909+00:00",
+        "verified_at": "2026-10-12T02:24:02.608022+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
-      "checked_at": "2026-10-05T02:01:03.079909+00:00",
+      "checked_at": "2026-10-12T02:24:02.608022+00:00",
       "coverage": {
         "source": "arXiv author search",
         "scanned": 300,
-        "total": 322,
+        "total": 324,
         "truncated": true,
         "queries": [
           "https://export.arxiv.org/api/query?search_query=au%3A%22Andreas+Krause%22&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending",
@@ -633,10 +633,10 @@
           "source_url": "https://arxiv.org/abs/2406.14699"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-10-05T02:01:09.017889+00:00",
+        "verified_at": "2026-10-12T02:24:08.934627+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
-      "checked_at": "2026-10-05T02:01:09.017889+00:00",
+      "checked_at": "2026-10-12T02:24:08.934627+00:00",
       "coverage": {
         "source": "arXiv author search",
         "scanned": 188,
@@ -716,10 +716,10 @@
           "source_url": "https://arxiv.org/abs/2606.22813"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-10-05T02:01:15.158125+00:00",
+        "verified_at": "2026-10-12T02:24:15.226000+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
-      "checked_at": "2026-10-05T02:01:15.158125+00:00",
+      "checked_at": "2026-10-12T02:24:15.226000+00:00",
       "coverage": {
         "source": "arXiv author search",
         "scanned": 117,
@@ -799,10 +799,10 @@
           "source_url": "https://arxiv.org/abs/2512.01924"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-10-05T02:01:18.251424+00:00",
+        "verified_at": "2026-10-12T02:24:18.415287+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
-      "checked_at": "2026-10-05T02:01:18.251424+00:00",
+      "checked_at": "2026-10-12T02:24:18.415287+00:00",
       "coverage": {
         "source": "arXiv author search",
         "scanned": 9,
@@ -879,10 +879,10 @@
           "source_url": "https://arxiv.org/abs/2504.18339"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-10-05T02:01:21.263169+00:00",
+        "verified_at": "2026-10-12T02:24:21.849569+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
-      "checked_at": "2026-10-05T02:01:21.263169+00:00",
+      "checked_at": "2026-10-12T02:24:21.849569+00:00",
       "coverage": {
         "source": "arXiv author search",
         "scanned": 44,
@@ -964,10 +964,10 @@
           "source_url": "https://arxiv.org/abs/2505.02216"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-10-05T02:01:29.285465+00:00",
+        "verified_at": "2026-10-12T02:24:28.080872+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
-      "checked_at": "2026-10-05T02:01:29.285465+00:00",
+      "checked_at": "2026-10-12T02:24:28.080872+00:00",
       "coverage": {
         "source": "arXiv author search",
         "scanned": 127,
@@ -992,7 +992,7 @@
       "members": [],
       "status": "no_match",
       "paper": null,
-      "checked_at": "2026-10-05T02:01:31.884848+00:00",
+      "checked_at": "2026-10-12T02:24:31.272457+00:00",
       "coverage": {
         "source": "arXiv author search",
         "scanned": 54,
@@ -1069,10 +1069,10 @@
           "source_url": "https://arxiv.org/abs/2403.10283"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-10-05T02:01:37.687803+00:00",
+        "verified_at": "2026-10-12T02:24:34.493297+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
-      "checked_at": "2026-10-05T02:01:37.687803+00:00",
+      "checked_at": "2026-10-12T02:24:34.493297+00:00",
       "coverage": {
         "source": "arXiv author search",
         "scanned": 17,
