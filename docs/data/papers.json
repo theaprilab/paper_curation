@@ -65,12 +65,12 @@
           "source_url": "https://arxiv.org/abs/2406.14699"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-11-02T02:30:34.572537+00:00",
+        "verified_at": "2026-11-09T02:39:46.150666+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
       "publication_url": "https://www.yisongyue.com/research",
       "first_selected_at": "2026-09-28T12:05:46.123305+00:00",
-      "last_selected_at": "2026-11-02T02:31:00.109674+00:00",
+      "last_selected_at": "2026-11-09T02:40:11.717763+00:00",
       "archived_at": null
     },
     {
@@ -128,12 +128,12 @@
           "source_url": "https://arxiv.org/abs/2403.10283"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-11-02T02:31:00.090787+00:00",
+        "verified_at": "2026-11-09T02:40:11.696468+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
       "publication_url": "https://www.uni-koblenz.de/de/informatik/icv/neubert",
       "first_selected_at": "2026-09-28T12:05:46.123305+00:00",
-      "last_selected_at": "2026-11-02T02:31:00.109674+00:00",
+      "last_selected_at": "2026-11-09T02:40:11.717763+00:00",
       "archived_at": null
     },
     {
@@ -195,12 +195,12 @@
           "source_url": "https://arxiv.org/abs/2512.01924"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-11-02T02:30:44.036469+00:00",
+        "verified_at": "2026-11-09T02:39:56.466338+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
       "publication_url": "https://murata-lab.jp/publications/?lang=en",
       "first_selected_at": "2026-09-28T12:05:46.123305+00:00",
-      "last_selected_at": "2026-11-02T02:31:00.109674+00:00",
+      "last_selected_at": "2026-11-09T02:40:11.717763+00:00",
       "archived_at": null
     },
     {
@@ -258,12 +258,12 @@
           "source_url": "https://arxiv.org/abs/2504.18339"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-11-02T02:30:47.315922+00:00",
+        "verified_at": "2026-11-09T02:39:59.105539+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
       "publication_url": "https://www.lavalle.pl/ispace.html",
       "first_selected_at": "2026-09-28T12:05:46.123305+00:00",
-      "last_selected_at": "2026-11-02T02:31:00.109674+00:00",
+      "last_selected_at": "2026-11-09T02:40:11.717763+00:00",
       "archived_at": null
     },
     {
@@ -281,11 +281,11 @@
           "Robert K. Katzschmann"
         ],
         "date": "2025-10-31",
-        "updated": "2025-10-31",
+        "updated": "2026-11-04",
         "date_type": "arxiv_first_submission",
         "link": "https://arxiv.org/abs/2510.27428",
         "source": "arXiv",
-        "abstract": "Soft robots offer unmatched adaptability and safety in unstructured environments, yet their compliant, high-dimensional, and nonlinear dynamics make modeling for control notoriously difficult. Existing data-driven approaches often fail to generalize, constrained by narrowly focused task demonstrations or inefficient random exploration. We introduce SoftAE, an uncertainty-aware active exploration framework that autonomously learns task-agnostic and generalizable dynamics models of soft robotic systems. SoftAE employs probabilistic ensemble models to estimate epistemic uncertainty and actively guides exploration toward underrepresented regions of the state-action space, achieving efficient coverage of diverse behaviors without task-specific supervision. We evaluate SoftAE on three simulated soft robotic platforms -- a continuum arm, an articulated fish in fluid, and a musculoskeletal leg with hybrid actuation -- and on a pneumatically actuated continuum soft arm in the real world. Compared with random exploration and task-specific model-based reinforcement learning, SoftAE produces more accurate dynamics models, enables superior zero-shot control on unseen tasks, and maintains robustness under sensing noise, actuation delays, and nonlinear material effects. These results demonstrate that uncertainty-driven active exploration can yield scalable, reusable dynamics models across diverse soft robotic morphologies, representing a step toward more autonomous, adaptable, and data-efficient control in compliant robots.",
+        "abstract": "Soft robots offer adaptability and safety in unstructured environments, yet their compliant, high-dimensional, and nonlinear dynamics make modeling for control difficult. Existing data-driven approaches often fail to generalize, constrained by narrowly focused task demonstrations or inefficient random exploration. We introduce an uncertainty-aware active exploration framework that autonomously learns task-agnostic and generalizable dynamics models of soft robotic systems. We evaluate this framework on three simulated platforms---a continuum arm, an articulated fish in fluid, and a musculoskeletal leg---and on a real-world pneumatically actuated continuum arm. Compared with random exploration and task-specific baseline, our method achieves higher modeling accuracy by actively collecting informative data. This improved model quality yields higher returns in zero-shot control on unseen tasks and robust performance under sensing noise, actuation delays, and material nonlinearities. These results demonstrate that uncertainty-driven active exploration enables data-efficient dynamics learning across soft robotic morphologies, supporting autonomous and adaptable control for compliant robots.",
         "categories": [
           "cs.RO",
           "cs.AI"
@@ -300,8 +300,8 @@
           "method": "keyword_rules_v1",
           "evidence": [
             "Learning Soft Robotic Dynamics with Active Exploration.",
-            "Soft robots offer unmatched adaptability and safety in unstructured environments, yet their compliant, high-dimensional, and nonlinear dynamics make modeling for control notoriously difficult.",
-            "We introduce SoftAE, an uncertainty-aware active exploration framework that autonomously learns task-agnostic and generalizable dynamics models of soft robotic systems."
+            "Soft robots offer adaptability and safety in unstructured environments, yet their compliant, high-dimensional, and nonlinear dynamics make modeling for control difficult.",
+            "We introduce an uncertainty-aware active exploration framework that autonomously learns task-agnostic and generalizable dynamics models of soft robotic systems."
           ],
           "matched_terms": [
             "robotic",
@@ -314,25 +314,25 @@
         "attribution": "guru_author",
         "summary": "불확실성을 이용해 탐색할 동작을 선택하고 소프트 로봇의 동역학 모델을 학습하는 SoftAE를 제안합니다. 시뮬레이션 3종과 실제 공압 소프트 암에서 모델 정확도와 새로운 작업으로의 전이를 평가합니다.",
         "summary_method": "assistant_abstract_summary",
-        "why_it_matters": "새로운 작업마다 소프트 로봇 데이터를 다시 모으는 비용이 크다면, 동역학 학습용 탐색 정책을 설계할 때 활용할 수 있습니다. SoftAE는 확률적 앙상블의 인식론적 불확실성으로 덜 관측된 상태·행동 영역을 찾아 탐색합니다. 작업별 시연에 맞춘 모델 대신 여러 작업에서 재사용할 동역학 모델을 만드는 접근입니다.",
+        "why_it_matters": "We introduce an uncertainty-aware active exploration framework that autonomously learns task-agnostic and generalizable dynamics models of soft robotic systems.",
         "reading_note": {
-          "application": "새로운 작업마다 소프트 로봇 데이터를 다시 모으는 비용이 크다면, 동역학 학습용 탐색 정책을 설계할 때 활용할 수 있습니다. SoftAE는 확률적 앙상블의 인식론적 불확실성으로 덜 관측된 상태·행동 영역을 찾아 탐색합니다. 작업별 시연에 맞춘 모델 대신 여러 작업에서 재사용할 동역학 모델을 만드는 접근입니다.",
-          "validation_scope": "소프트 로봇 시뮬레이션 3종과 실제 공압 연속체 암에서 평가했습니다. 초록은 무작위 탐색·작업별 모델 기반 RL 대비 모델 정확도와 미관측 작업의 zero-shot 제어 개선을 보고하지만, 개선 수치나 실제 데이터 수집량은 제시하지 않습니다.",
+          "application": "We introduce an uncertainty-aware active exploration framework that autonomously learns task-agnostic and generalizable dynamics models of soft robotic systems.",
+          "validation_scope": "We evaluate this framework on three simulated platforms---a continuum arm, an articulated fish in fluid, and a musculoskeletal leg---and on a real-world pneumatically actuated continuum arm. These results demonstrate that uncertainty-driven active exploration enables data-efficient dynamics learning across soft robotic morphologies, supporting autonomous and adaptable control for compliant robots.",
           "evidence": [
-            "SoftAE employs probabilistic ensemble models to estimate epistemic uncertainty and actively guides exploration toward underrepresented regions of the state-action space, achieving efficient coverage of diverse behaviors without task-specific supervision.",
-            "We evaluate SoftAE on three simulated soft robotic platforms -- a continuum arm, an articulated fish in fluid, and a musculoskeletal leg with hybrid actuation -- and on a pneumatically actuated continuum soft arm in the real world.",
-            "Compared with random exploration and task-specific model-based reinforcement learning, SoftAE produces more accurate dynamics models, enables superior zero-shot control on unseen tasks, and maintains robustness under sensing noise, actuation delays, and nonlinear material effects."
+            "We introduce an uncertainty-aware active exploration framework that autonomously learns task-agnostic and generalizable dynamics models of soft robotic systems.",
+            "We evaluate this framework on three simulated platforms---a continuum arm, an articulated fish in fluid, and a musculoskeletal leg---and on a real-world pneumatically actuated continuum arm.",
+            "These results demonstrate that uncertainty-driven active exploration enables data-efficient dynamics learning across soft robotic morphologies, supporting autonomous and adaptable control for compliant robots."
           ],
-          "method": "assistant_abstract_analysis",
+          "method": "extractive_abstract",
           "source_url": "https://arxiv.org/abs/2510.27428"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-11-02T02:30:28.246730+00:00",
+        "verified_at": "2026-11-09T02:39:39.881102+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
       "publication_url": "https://las.inf.ethz.ch/publications",
       "first_selected_at": "2026-09-28T12:05:46.123305+00:00",
-      "last_selected_at": "2026-11-02T02:31:00.109674+00:00",
+      "last_selected_at": "2026-11-09T02:40:11.717763+00:00",
       "archived_at": null
     },
     {
@@ -395,12 +395,12 @@
           "source_url": "https://arxiv.org/abs/2505.02216"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-11-02T02:30:54.262521+00:00",
+        "verified_at": "2026-11-09T02:40:05.300900+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
       "publication_url": "https://lis.csail.mit.edu/research/",
       "first_selected_at": "2026-09-28T12:05:46.123305+00:00",
-      "last_selected_at": "2026-11-02T02:31:00.109674+00:00",
+      "last_selected_at": "2026-11-09T02:40:11.717763+00:00",
       "archived_at": null
     },
     {
@@ -461,16 +461,16 @@
           "source_url": "https://arxiv.org/abs/2606.22813"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-11-02T02:30:40.885918+00:00",
+        "verified_at": "2026-11-09T02:39:52.507869+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
       "publication_url": "https://www.fil.ion.ucl.ac.uk/~karl/",
       "first_selected_at": "2026-09-28T12:05:46.123305+00:00",
-      "last_selected_at": "2026-11-02T02:31:00.109674+00:00",
+      "last_selected_at": "2026-11-09T02:40:11.717763+00:00",
       "archived_at": null
     }
   ],
-  "generated_at": "2026-11-02T02:31:00.109674+00:00",
+  "generated_at": "2026-11-09T02:40:11.717763+00:00",
   "mode": "live",
   "latest_scope": "검색한 arXiv 저자 논문 범위 내 최신 적합 후보. 전체 출판물의 최신성을 보장하지 않습니다.",
   "slots": [
@@ -498,11 +498,11 @@
           "Robert K. Katzschmann"
         ],
         "date": "2025-10-31",
-        "updated": "2025-10-31",
+        "updated": "2026-11-04",
         "date_type": "arxiv_first_submission",
         "link": "https://arxiv.org/abs/2510.27428",
         "source": "arXiv",
-        "abstract": "Soft robots offer unmatched adaptability and safety in unstructured environments, yet their compliant, high-dimensional, and nonlinear dynamics make modeling for control notoriously difficult. Existing data-driven approaches often fail to generalize, constrained by narrowly focused task demonstrations or inefficient random exploration. We introduce SoftAE, an uncertainty-aware active exploration framework that autonomously learns task-agnostic and generalizable dynamics models of soft robotic systems. SoftAE employs probabilistic ensemble models to estimate epistemic uncertainty and actively guides exploration toward underrepresented regions of the state-action space, achieving efficient coverage of diverse behaviors without task-specific supervision. We evaluate SoftAE on three simulated soft robotic platforms -- a continuum arm, an articulated fish in fluid, and a musculoskeletal leg with hybrid actuation -- and on a pneumatically actuated continuum soft arm in the real world. Compared with random exploration and task-specific model-based reinforcement learning, SoftAE produces more accurate dynamics models, enables superior zero-shot control on unseen tasks, and maintains robustness under sensing noise, actuation delays, and nonlinear material effects. These results demonstrate that uncertainty-driven active exploration can yield scalable, reusable dynamics models across diverse soft robotic morphologies, representing a step toward more autonomous, adaptable, and data-efficient control in compliant robots.",
+        "abstract": "Soft robots offer adaptability and safety in unstructured environments, yet their compliant, high-dimensional, and nonlinear dynamics make modeling for control difficult. Existing data-driven approaches often fail to generalize, constrained by narrowly focused task demonstrations or inefficient random exploration. We introduce an uncertainty-aware active exploration framework that autonomously learns task-agnostic and generalizable dynamics models of soft robotic systems. We evaluate this framework on three simulated platforms---a continuum arm, an articulated fish in fluid, and a musculoskeletal leg---and on a real-world pneumatically actuated continuum arm. Compared with random exploration and task-specific baseline, our method achieves higher modeling accuracy by actively collecting informative data. This improved model quality yields higher returns in zero-shot control on unseen tasks and robust performance under sensing noise, actuation delays, and material nonlinearities. These results demonstrate that uncertainty-driven active exploration enables data-efficient dynamics learning across soft robotic morphologies, supporting autonomous and adaptable control for compliant robots.",
         "categories": [
           "cs.RO",
           "cs.AI"
@@ -517,8 +517,8 @@
           "method": "keyword_rules_v1",
           "evidence": [
             "Learning Soft Robotic Dynamics with Active Exploration.",
-            "Soft robots offer unmatched adaptability and safety in unstructured environments, yet their compliant, high-dimensional, and nonlinear dynamics make modeling for control notoriously difficult.",
-            "We introduce SoftAE, an uncertainty-aware active exploration framework that autonomously learns task-agnostic and generalizable dynamics models of soft robotic systems."
+            "Soft robots offer adaptability and safety in unstructured environments, yet their compliant, high-dimensional, and nonlinear dynamics make modeling for control difficult.",
+            "We introduce an uncertainty-aware active exploration framework that autonomously learns task-agnostic and generalizable dynamics models of soft robotic systems."
           ],
           "matched_terms": [
             "robotic",
@@ -531,27 +531,27 @@
         "attribution": "guru_author",
         "summary": "불확실성을 이용해 탐색할 동작을 선택하고 소프트 로봇의 동역학 모델을 학습하는 SoftAE를 제안합니다. 시뮬레이션 3종과 실제 공압 소프트 암에서 모델 정확도와 새로운 작업으로의 전이를 평가합니다.",
         "summary_method": "assistant_abstract_summary",
-        "why_it_matters": "새로운 작업마다 소프트 로봇 데이터를 다시 모으는 비용이 크다면, 동역학 학습용 탐색 정책을 설계할 때 활용할 수 있습니다. SoftAE는 확률적 앙상블의 인식론적 불확실성으로 덜 관측된 상태·행동 영역을 찾아 탐색합니다. 작업별 시연에 맞춘 모델 대신 여러 작업에서 재사용할 동역학 모델을 만드는 접근입니다.",
+        "why_it_matters": "We introduce an uncertainty-aware active exploration framework that autonomously learns task-agnostic and generalizable dynamics models of soft robotic systems.",
         "reading_note": {
-          "application": "새로운 작업마다 소프트 로봇 데이터를 다시 모으는 비용이 크다면, 동역학 학습용 탐색 정책을 설계할 때 활용할 수 있습니다. SoftAE는 확률적 앙상블의 인식론적 불확실성으로 덜 관측된 상태·행동 영역을 찾아 탐색합니다. 작업별 시연에 맞춘 모델 대신 여러 작업에서 재사용할 동역학 모델을 만드는 접근입니다.",
-          "validation_scope": "소프트 로봇 시뮬레이션 3종과 실제 공압 연속체 암에서 평가했습니다. 초록은 무작위 탐색·작업별 모델 기반 RL 대비 모델 정확도와 미관측 작업의 zero-shot 제어 개선을 보고하지만, 개선 수치나 실제 데이터 수집량은 제시하지 않습니다.",
+          "application": "We introduce an uncertainty-aware active exploration framework that autonomously learns task-agnostic and generalizable dynamics models of soft robotic systems.",
+          "validation_scope": "We evaluate this framework on three simulated platforms---a continuum arm, an articulated fish in fluid, and a musculoskeletal leg---and on a real-world pneumatically actuated continuum arm. These results demonstrate that uncertainty-driven active exploration enables data-efficient dynamics learning across soft robotic morphologies, supporting autonomous and adaptable control for compliant robots.",
           "evidence": [
-            "SoftAE employs probabilistic ensemble models to estimate epistemic uncertainty and actively guides exploration toward underrepresented regions of the state-action space, achieving efficient coverage of diverse behaviors without task-specific supervision.",
-            "We evaluate SoftAE on three simulated soft robotic platforms -- a continuum arm, an articulated fish in fluid, and a musculoskeletal leg with hybrid actuation -- and on a pneumatically actuated continuum soft arm in the real world.",
-            "Compared with random exploration and task-specific model-based reinforcement learning, SoftAE produces more accurate dynamics models, enables superior zero-shot control on unseen tasks, and maintains robustness under sensing noise, actuation delays, and nonlinear material effects."
+            "We introduce an uncertainty-aware active exploration framework that autonomously learns task-agnostic and generalizable dynamics models of soft robotic systems.",
+            "We evaluate this framework on three simulated platforms---a continuum arm, an articulated fish in fluid, and a musculoskeletal leg---and on a real-world pneumatically actuated continuum arm.",
+            "These results demonstrate that uncertainty-driven active exploration enables data-efficient dynamics learning across soft robotic morphologies, supporting autonomous and adaptable control for compliant robots."
           ],
-          "method": "assistant_abstract_analysis",
+          "method": "extractive_abstract",
           "source_url": "https://arxiv.org/abs/2510.27428"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-11-02T02:30:28.246730+00:00",
+        "verified_at": "2026-11-09T02:39:39.881102+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
-      "checked_at": "2026-11-02T02:30:28.246730+00:00",
+      "checked_at": "2026-11-09T02:39:39.881102+00:00",
       "coverage": {
         "source": "arXiv author search",
         "scanned": 300,
-        "total": 326,
+        "total": 331,
         "truncated": true,
         "queries": [
           "https://export.arxiv.org/api/query?search_query=au%3A%22Andreas+Krause%22&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending",
@@ -633,10 +633,10 @@
           "source_url": "https://arxiv.org/abs/2406.14699"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-11-02T02:30:34.572537+00:00",
+        "verified_at": "2026-11-09T02:39:46.150666+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
-      "checked_at": "2026-11-02T02:30:34.572537+00:00",
+      "checked_at": "2026-11-09T02:39:46.150666+00:00",
       "coverage": {
         "source": "arXiv author search",
         "scanned": 190,
@@ -716,10 +716,10 @@
           "source_url": "https://arxiv.org/abs/2606.22813"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-11-02T02:30:40.885918+00:00",
+        "verified_at": "2026-11-09T02:39:52.507869+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
-      "checked_at": "2026-11-02T02:30:40.885918+00:00",
+      "checked_at": "2026-11-09T02:39:52.507869+00:00",
       "coverage": {
         "source": "arXiv author search",
         "scanned": 117,
@@ -799,10 +799,10 @@
           "source_url": "https://arxiv.org/abs/2512.01924"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-11-02T02:30:44.036469+00:00",
+        "verified_at": "2026-11-09T02:39:56.466338+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
-      "checked_at": "2026-11-02T02:30:44.036469+00:00",
+      "checked_at": "2026-11-09T02:39:56.466338+00:00",
       "coverage": {
         "source": "arXiv author search",
         "scanned": 9,
@@ -879,14 +879,14 @@
           "source_url": "https://arxiv.org/abs/2504.18339"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-11-02T02:30:47.315922+00:00",
+        "verified_at": "2026-11-09T02:39:59.105539+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
-      "checked_at": "2026-11-02T02:30:47.315922+00:00",
+      "checked_at": "2026-11-09T02:39:59.105539+00:00",
       "coverage": {
         "source": "arXiv author search",
-        "scanned": 44,
-        "total": 44,
+        "scanned": 45,
+        "total": 45,
         "truncated": false,
         "queries": [
           "https://export.arxiv.org/api/query?search_query=au%3A%22Steven+M.+LaValle%22+OR+au%3A%22Steven+LaValle%22+OR+au%3A%22Steven+M+LaValle%22&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending"
@@ -964,14 +964,14 @@
           "source_url": "https://arxiv.org/abs/2505.02216"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-11-02T02:30:54.262521+00:00",
+        "verified_at": "2026-11-09T02:40:05.300900+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
-      "checked_at": "2026-11-02T02:30:54.262521+00:00",
+      "checked_at": "2026-11-09T02:40:05.300900+00:00",
       "coverage": {
         "source": "arXiv author search",
-        "scanned": 127,
-        "total": 127,
+        "scanned": 130,
+        "total": 130,
         "truncated": false,
         "queries": [
           "https://export.arxiv.org/api/query?search_query=au%3A%22Leslie+Pack+Kaelbling%22+OR+au%3A%22Leslie+P.+Kaelbling%22+OR+au%3A%22Leslie+Kaelbling%22&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending",
@@ -992,7 +992,7 @@
       "members": [],
       "status": "no_match",
       "paper": null,
-      "checked_at": "2026-11-02T02:30:57.256770+00:00",
+      "checked_at": "2026-11-09T02:40:08.573065+00:00",
       "coverage": {
         "source": "arXiv author search",
         "scanned": 55,
@@ -1069,10 +1069,10 @@
           "source_url": "https://arxiv.org/abs/2403.10283"
         },
         "review_status": "needs_review",
-        "verified_at": "2026-11-02T02:31:00.090787+00:00",
+        "verified_at": "2026-11-09T02:40:11.696468+00:00",
         "freshness": "latest_matching_in_scanned_arxiv_results"
       },
-      "checked_at": "2026-11-02T02:31:00.090787+00:00",
+      "checked_at": "2026-11-09T02:40:11.696468+00:00",
       "coverage": {
         "source": "arXiv author search",
         "scanned": 18,
